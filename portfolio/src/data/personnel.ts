@@ -8,5 +8,5 @@ export const personnel = {
   telephone: "+33 7 87 37 78 80",
   linkedin: "https://www.linkedin.com/in/nathan-carpentier-143954250/",
   github: "https://github.com/CARPENTIER-Nathan",
-  localisation: "France",
+  localisation: "12 Place de l'hotel de ville, 55130 GrondreCourt-le-Chateau, France",
 };

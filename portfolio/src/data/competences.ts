@@ -59,14 +59,34 @@ export const competencesTechniques: CategorieCompetence[] = [
         icone: "SiPython",
       },
       {
+        nom: "Django",
+        description: "Framework web Python complet avec architecture MVT, ORM intégré et panneau d'administration.",
+        icone: "SiDjango",
+      },
+      {
+        nom: "PHP",
+        description: "Langage serveur largement utilisé pour le développement web dynamique et les CMS.",
+        icone: "SiPhp",
+      },
+      {
         nom: "Java",
-        description: "Langage orienté objet robuste pour des applications d'entreprise et des systèmes distribués.",
+        description: "Langage orienté objet robuste pour des applications d'entreprise et le développement mobile Android.",
         icone: "SiOpenjdk",
       },
       {
-        nom: "SQL",
-        description: "Langage de requêtes pour la gestion et l'interrogation de bases de données relationnelles.",
-        icone: "SiPostgresql",
+        nom: "WordPress",
+        description: "CMS open-source pour la création de sites web, avec personnalisation de thèmes et plugins.",
+        icone: "SiWordpress",
+      },
+      {
+        nom: "MySQL",
+        description: "Système de gestion de bases de données relationnelles open-source, largement utilisé en production.",
+        icone: "SiMysql",
+      },
+      {
+        nom: "SQLite",
+        description: "Base de données légère et embarquée, idéale pour les applications mobiles et le prototypage.",
+        icone: "SiSqlite",
       },
     ],
   },
@@ -87,6 +107,11 @@ export const competencesTechniques: CategorieCompetence[] = [
         nom: "Linux",
         description: "Système d'exploitation open-source, maîtrise de l'administration système et du terminal.",
         icone: "SiLinux",
+      },
+      {
+        nom: "Android Studio",
+        description: "IDE officiel pour le développement d'applications mobiles Android en Java et Kotlin.",
+        icone: "SiAndroidstudio",
       },
       {
         nom: "VS Code",

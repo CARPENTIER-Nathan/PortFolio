@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!projet) return {};
   return {
     title: projet.titre,
-    description: projet.descriptionCourte,
+    description: projet.description,
   };
 }
 
@@ -63,7 +63,7 @@ export default async function PageProjet({ params }: PageProps) {
             {projet.titre}
           </h1>
           <p className="mt-2 text-lg text-violet-600 font-medium">
-            {projet.role}
+            {projet.poste}
           </p>
         </SectionAnimee>
 

@@ -40,7 +40,7 @@ export default function CarteProjets({ projet, index }: CarteProjetProps) {
                 {projet.titre}
               </h3>
               <p className="mt-2 text-gray-500 text-sm line-clamp-2">
-                {projet.descriptionCourte}
+                {projet.description}
               </p>
               <div className="mt-4 flex flex-wrap gap-2">
                 {projet.technologies.slice(0, 4).map((tech) => (

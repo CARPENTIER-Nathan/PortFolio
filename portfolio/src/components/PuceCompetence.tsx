@@ -9,11 +9,16 @@ import {
   SiTailwindcss,
   SiNodedotjs,
   SiPython,
+  SiDjango,
+  SiPhp,
   SiOpenjdk,
-  SiPostgresql,
+  SiWordpress,
+  SiMysql,
+  SiSqlite,
   SiGit,
   SiDocker,
   SiLinux,
+  SiAndroidstudio,
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 import type { Competence } from "@/data/competences";
@@ -27,11 +32,16 @@ const carteIcones: Record<string, React.ReactNode> = {
   SiTailwindcss: <SiTailwindcss size={16} />,
   SiNodedotjs: <SiNodedotjs size={16} />,
   SiPython: <SiPython size={16} />,
+  SiDjango: <SiDjango size={16} />,
+  SiPhp: <SiPhp size={16} />,
   SiOpenjdk: <SiOpenjdk size={16} />,
-  SiPostgresql: <SiPostgresql size={16} />,
+  SiWordpress: <SiWordpress size={16} />,
+  SiMysql: <SiMysql size={16} />,
+  SiSqlite: <SiSqlite size={16} />,
   SiGit: <SiGit size={16} />,
   SiDocker: <SiDocker size={16} />,
   SiLinux: <SiLinux size={16} />,
+  SiAndroidstudio: <SiAndroidstudio size={16} />,
   VscVscode: <VscVscode size={16} />,
 };
 

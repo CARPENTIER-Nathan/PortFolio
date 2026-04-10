@@ -60,17 +60,3 @@ body {
   transition: inset 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-card:hover .gradient-border::before {
-  inset: -3px;
-  box-shadow: 0 0 20px rgba(139, 92, 246, 0.35);
-}
-
-@keyframes gradient-shift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-}
-
-.animate-gradient {
-  background-size: 200% 200%;
-  animation: gradient-shift 6s ease infinite;
-}

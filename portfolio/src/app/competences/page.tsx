@@ -17,11 +17,16 @@ import {
   SiTailwindcss,
   SiNodedotjs,
   SiPython,
+  SiDjango,
+  SiPhp,
   SiOpenjdk,
-  SiPostgresql,
+  SiWordpress,
+  SiMysql,
+  SiSqlite,
   SiGit,
   SiDocker,
   SiLinux,
+  SiAndroidstudio,
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 
@@ -40,11 +45,16 @@ const carteIconesTech: Record<string, React.ReactNode> = {
   SiTailwindcss: <SiTailwindcss size={28} />,
   SiNodedotjs: <SiNodedotjs size={28} />,
   SiPython: <SiPython size={28} />,
+  SiDjango: <SiDjango size={28} />,
+  SiPhp: <SiPhp size={28} />,
   SiOpenjdk: <SiOpenjdk size={28} />,
-  SiPostgresql: <SiPostgresql size={28} />,
+  SiWordpress: <SiWordpress size={28} />,
+  SiMysql: <SiMysql size={28} />,
+  SiSqlite: <SiSqlite size={28} />,
   SiGit: <SiGit size={28} />,
   SiDocker: <SiDocker size={28} />,
   SiLinux: <SiLinux size={28} />,
+  SiAndroidstudio: <SiAndroidstudio size={28} />,
   VscVscode: <VscVscode size={28} />,
 };
 
