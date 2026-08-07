@@ -50,7 +50,7 @@ export const projets: Projet[] = [
       "Concevoir une interface utilisateur intuitive pour le suivi des entrées et sorties de stock",
       "Mettre en place une base de données locale pour le stockage des produits",
     ],
-    technologies: ["Java", "Android Studio", "SQLite", "ZXing (QR Code)"],
+    technologies: ["Java", "Android Studio", "SQLite"],
     defis:
       "Le principal défi a été d'intégrer la génération et la lecture de QR Codes de manière fluide dans l'application, tout en assurant une gestion fiable des données de stock. L'optimisation de l'interface pour une utilisation rapide en contexte professionnel (entrepôt, magasin) a également été un enjeu important.",
     solutions:

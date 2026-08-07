@@ -1,0 +1,72 @@
+.pied {
+  background: var(--gris-900);
+  color: var(--gris-200);
+  padding: 3rem 0;
+}
+
+.colonnes {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .colonnes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.marque {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--blanc);
+}
+
+.titrePoste {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--gris-400);
+}
+
+.titreColonne {
+  margin-bottom: 1rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--blanc);
+}
+
+.liste {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.lien {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--gris-400);
+  transition: color 0.2s ease;
+}
+
+.lien:hover {
+  color: var(--blanc);
+}
+
+.reseaux {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.mentions {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--gris-600);
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--gris-500);
+}

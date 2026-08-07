@@ -8,6 +8,7 @@ import {
   FaGithub,
   FaMapMarkerAlt,
 } from "react-icons/fa";
+import styles from "./contact.module.css";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -51,17 +52,14 @@ const liensReseaux = [
 
 export default function ContactPage() {
   return (
-    <div className="py-20">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="section">
+      <div className="conteneur conteneurEtroit">
         <SectionAnimee>
-          <div className="text-center mb-16">
-            <h1
-              className="text-4xl sm:text-5xl font-bold"
-              style={{ fontFamily: "var(--font-poppins)" }}
-            >
-              Me <span className="gradient-text">Contacter</span>
+          <div className="entetePage">
+            <h1 className="titrePage">
+              Me <span className="accent">Contacter</span>
             </h1>
-            <p className="mt-4 text-gray-500 max-w-2xl mx-auto text-lg">
+            <p className="introPage">
               Vous avez une question ou souhaitez collaborer ? N&apos;hésitez
               pas à me contacter via mes coordonnées ci-dessous.
             </p>
@@ -69,42 +67,33 @@ export default function ContactPage() {
         </SectionAnimee>
 
         <SectionAnimee>
-          <div className="space-y-6">
+          <div className={styles.liste}>
             {infosContact.map((info) => (
-              <div key={info.label} className="gradient-border p-6">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-violet-500 to-pink-500 flex items-center justify-center text-white shrink-0">
-                    {info.icone}
-                  </div>
-                  <div>
-                    <p className="text-sm text-gray-400">{info.label}</p>
-                    {info.lien ? (
-                      <a
-                        href={info.lien}
-                        className="text-lg text-gray-900 font-medium hover:text-violet-600 transition-colors"
-                      >
-                        {info.valeur}
-                      </a>
-                    ) : (
-                      <p className="text-lg text-gray-900 font-medium">
-                        {info.valeur}
-                      </p>
-                    )}
-                  </div>
+              <div key={info.label} className={styles.fiche}>
+                <span className="pastilleIcone">{info.icone}</span>
+                <div>
+                  <p className={styles.libelle}>{info.label}</p>
+                  {info.lien ? (
+                    <a href={info.lien} className={styles.valeur}>
+                      {info.valeur}
+                    </a>
+                  ) : (
+                    <p className={styles.valeur}>{info.valeur}</p>
+                  )}
                 </div>
               </div>
             ))}
 
-            <div className="gradient-border p-6">
-              <p className="text-sm text-gray-400 mb-4">Réseaux sociaux</p>
-              <div className="flex gap-4">
+            <div className={styles.blocReseaux}>
+              <p className={styles.libelle}>Réseaux sociaux</p>
+              <div className={styles.reseaux}>
                 {liensReseaux.map((reseau) => (
                   <a
                     key={reseau.label}
                     href={reseau.lien}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-14 h-14 rounded-xl bg-gradient-to-r from-violet-500 to-pink-500 flex items-center justify-center text-white hover:shadow-lg hover:shadow-violet-500/25 hover:-translate-y-0.5 transition-all duration-200"
+                    className={styles.lienReseau}
                     aria-label={reseau.label}
                   >
                     {reseau.icone}

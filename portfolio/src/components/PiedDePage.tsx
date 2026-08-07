@@ -1,37 +1,35 @@
 import Link from "next/link";
 import { FaGithub, FaLinkedin, FaEnvelope, FaPhone } from "react-icons/fa";
 import { personnel } from "@/data/personnel";
+import styles from "./PiedDePage.module.css";
+
+const liensNavigation = [
+  { href: "/", label: "Accueil" },
+  { href: "/projets", label: "Projets" },
+  { href: "/competences", label: "Compétences" },
+  { href: "/contact", label: "Contact" },
+];
 
 export default function PiedDePage() {
   return (
-    <footer className="bg-gray-900 text-gray-300">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Marque */}
+    <footer className={styles.pied}>
+      <div className="conteneur">
+        <div className={styles.colonnes}>
+          {/* Identité */}
           <div>
-            <h3 className="text-xl font-bold bg-gradient-to-r from-violet-400 via-pink-400 to-orange-400 bg-clip-text text-transparent">
+            <h3 className={styles.marque}>
               {personnel.prenom} {personnel.nom}
             </h3>
-            <p className="mt-2 text-sm text-gray-400">{personnel.titre}</p>
+            <p className={styles.titrePoste}>{personnel.titre}</p>
           </div>
 
           {/* Navigation */}
           <div>
-            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
-              Navigation
-            </h4>
-            <ul className="space-y-2">
-              {[
-                { href: "/", label: "Accueil" },
-                { href: "/projets", label: "Projets" },
-                { href: "/competences", label: "Compétences" },
-                { href: "/contact", label: "Contact" },
-              ].map((lien) => (
+            <h4 className={styles.titreColonne}>Navigation</h4>
+            <ul className={styles.liste}>
+              {liensNavigation.map((lien) => (
                 <li key={lien.href}>
-                  <Link
-                    href={lien.href}
-                    className="text-sm text-gray-400 hover:text-white transition-colors"
-                  >
+                  <Link href={lien.href} className={styles.lien}>
                     {lien.label}
                   </Link>
                 </li>
@@ -41,29 +39,21 @@ export default function PiedDePage() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">
-              Contact
-            </h4>
-            <div className="space-y-2">
-              <a
-                href={`mailto:${personnel.email}`}
-                className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors"
-              >
+            <h4 className={styles.titreColonne}>Contact</h4>
+            <div className={styles.liste}>
+              <a href={`mailto:${personnel.email}`} className={styles.lien}>
                 <FaEnvelope /> {personnel.email}
               </a>
-              <a
-                href={`tel:${personnel.telephone}`}
-                className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors"
-              >
+              <a href={`tel:${personnel.telephone}`} className={styles.lien}>
                 <FaPhone /> {personnel.telephone}
               </a>
             </div>
-            <div className="flex gap-4 mt-4">
+            <div className={styles.reseaux}>
               <a
                 href={personnel.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
+                className={styles.lien}
                 aria-label="LinkedIn"
               >
                 <FaLinkedin size={20} />
@@ -72,7 +62,7 @@ export default function PiedDePage() {
                 href={personnel.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
+                className={styles.lien}
                 aria-label="GitHub"
               >
                 <FaGithub size={20} />
@@ -81,7 +71,7 @@ export default function PiedDePage() {
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-gray-800 text-center text-sm text-gray-500">
+        <div className={styles.mentions}>
           &copy; {new Date().getFullYear()} {personnel.prenom}{" "}
           {personnel.nom}. Tous droits réservés.
         </div>

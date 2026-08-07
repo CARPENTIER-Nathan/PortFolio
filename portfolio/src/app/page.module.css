@@ -1,0 +1,76 @@
+.enteteSection {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.titreSection {
+  font-size: 1.875rem;
+  font-weight: 700;
+}
+
+@media (min-width: 640px) {
+  .titreSection {
+    font-size: 2.25rem;
+  }
+}
+
+.introSection {
+  margin: 1rem auto 0;
+  max-width: 42rem;
+  color: var(--gris-500);
+}
+
+.puces {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.centre {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+/* Appel à l'action final */
+.appel {
+  background: var(--violet);
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.titreAppel {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--blanc);
+}
+
+@media (min-width: 640px) {
+  .titreAppel {
+    font-size: 2.25rem;
+  }
+}
+
+.texteAppel {
+  margin: 1rem auto 0;
+  max-width: 42rem;
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.boutonAppel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  padding: 0.875rem 2rem;
+  border-radius: var(--rayon-m);
+  background: var(--blanc);
+  color: var(--violet);
+  font-weight: 700;
+  transition: box-shadow 0.2s ease;
+}
+
+.boutonAppel:hover {
+  box-shadow: var(--ombre-l);
+}

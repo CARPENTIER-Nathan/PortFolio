@@ -1,0 +1,95 @@
+.retour {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  color: var(--violet);
+}
+
+.retour:hover {
+  color: var(--violet-fonce);
+}
+
+.visuel {
+  position: relative;
+  height: 16rem;
+  margin-bottom: 2rem;
+  border-radius: var(--rayon-l);
+  overflow: hidden;
+  background: var(--gris-100);
+}
+
+@media (min-width: 640px) {
+  .visuel {
+    height: 20rem;
+  }
+}
+
+.visuel img {
+  object-fit: cover;
+}
+
+.titre {
+  font-size: 1.875rem;
+  font-weight: 700;
+}
+
+@media (min-width: 640px) {
+  .titre {
+    font-size: 2.25rem;
+  }
+}
+
+.poste {
+  margin-top: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--violet);
+}
+
+.corps {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.titreSection {
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.paragraphe {
+  color: var(--gris-600);
+}
+
+.liste {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.puceListe {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  color: var(--gris-600);
+}
+
+.puceListe::before {
+  content: "";
+  flex-shrink: 0;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-top: 0.55rem;
+  border-radius: 50%;
+  background: var(--violet);
+}
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}

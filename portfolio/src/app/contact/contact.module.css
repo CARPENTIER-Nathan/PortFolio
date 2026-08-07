@@ -1,0 +1,66 @@
+.liste {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.fiche {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: var(--blanc);
+  border: 1px solid var(--gris-200);
+  border-radius: var(--rayon-l);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.fiche:hover {
+  border-color: var(--violet-clair);
+  box-shadow: var(--ombre-m);
+}
+
+.libelle {
+  font-size: 0.875rem;
+  color: var(--gris-400);
+}
+
+.valeur {
+  font-size: 1.0625rem;
+  font-weight: 500;
+  color: var(--gris-900);
+  transition: color 0.2s ease;
+}
+
+a.valeur:hover {
+  color: var(--violet);
+}
+
+.blocReseaux {
+  padding: 1.5rem;
+  background: var(--blanc);
+  border: 1px solid var(--gris-200);
+  border-radius: var(--rayon-l);
+}
+
+.reseaux {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.lienReseau {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: var(--rayon-m);
+  background: var(--violet);
+  color: var(--blanc);
+  transition: background-color 0.2s ease;
+}
+
+.lienReseau:hover {
+  background: var(--violet-fonce);
+}

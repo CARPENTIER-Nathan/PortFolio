@@ -1,0 +1,26 @@
+.puce {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background: var(--blanc);
+  border: 1px solid var(--gris-200);
+  border-radius: var(--rayon-m);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.puce:hover {
+  border-color: var(--violet-clair);
+  box-shadow: var(--ombre-s);
+}
+
+.icone {
+  display: flex;
+  color: var(--violet);
+}
+
+.nom {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--gris-600);
+}

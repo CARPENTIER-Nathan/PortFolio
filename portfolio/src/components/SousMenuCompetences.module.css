@@ -1,0 +1,56 @@
+.sousMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.titreGroupe {
+  margin-bottom: 0.75rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--gris-400);
+}
+
+.liste {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.lien {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--rayon-s);
+  font-size: 0.875rem;
+  color: var(--gris-600);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.lien:hover {
+  background: var(--gris-100);
+  color: var(--gris-900);
+}
+
+.lienActif {
+  background: var(--violet);
+  color: var(--blanc);
+  font-weight: 600;
+}
+
+.lienActif:hover {
+  background: var(--violet-fonce);
+  color: var(--blanc);
+}
+
+.icone {
+  display: flex;
+  color: var(--violet);
+}
+
+.lienActif .icone {
+  color: var(--blanc);
+}

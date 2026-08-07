@@ -11,17 +11,14 @@ export const metadata: Metadata = {
 
 export default function ProjetsPage() {
   return (
-    <div className="py-20">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="section">
+      <div className="conteneur">
         <SectionAnimee>
-          <div className="text-center mb-16">
-            <h1
-              className="text-4xl sm:text-5xl font-bold"
-              style={{ fontFamily: "var(--font-poppins)" }}
-            >
-              Mes <span className="gradient-text">Projets</span>
+          <div className="entetePage">
+            <h1 className="titrePage">
+              Mes <span className="accent">Projets</span>
             </h1>
-            <p className="mt-4 text-gray-500 max-w-2xl mx-auto text-lg">
+            <p className="introPage">
               Voici une sélection de projets réalisés en entreprise et en
               formation, illustrant mes compétences techniques et ma capacité à
               mener des projets de bout en bout.
@@ -29,7 +26,7 @@ export default function ProjetsPage() {
           </div>
         </SectionAnimee>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grille">
           {projets.map((projet, index) => (
             <CarteProjets key={projet.slug} projet={projet} index={index} />
           ))}

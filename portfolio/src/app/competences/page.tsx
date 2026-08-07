@@ -1,160 +1,122 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa";
 import SectionAnimee from "@/components/SectionAnimee";
-import { competencesTechniques, competencesHumaines } from "@/data/competences";
+import IconeCompetence from "@/components/IconeCompetence";
 import {
-  FaUsers,
-  FaComments,
-  FaTasks,
-  FaLightbulb,
-  FaSyncAlt,
-} from "react-icons/fa";
-import {
-  SiHtml5,
-  SiJavascript,
-  SiTypescript,
-  SiReact,
-  SiNextdotjs,
-  SiTailwindcss,
-  SiNodedotjs,
-  SiPython,
-  SiDjango,
-  SiPhp,
-  SiOpenjdk,
-  SiWordpress,
-  SiMysql,
-  SiSqlite,
-  SiGit,
-  SiDocker,
-  SiLinux,
-  SiAndroidstudio,
-} from "react-icons/si";
-import { VscVscode } from "react-icons/vsc";
+  competencesTechniques,
+  competencesHumaines,
+  type Competence,
+} from "@/data/competences";
+import styles from "./competences.module.css";
 
 export const metadata: Metadata = {
   title: "Compétences",
   description:
-    "Mes compétences techniques et humaines. Portfolio de Nathan CARPENTIER.",
+    "Mes dix compétences techniques et humaines, chacune détaillée dans un article dédié. Portfolio de Nathan CARPENTIER.",
 };
 
-const carteIconesTech: Record<string, React.ReactNode> = {
-  SiHtml5: <SiHtml5 size={28} />,
-  SiJavascript: <SiJavascript size={28} />,
-  SiTypescript: <SiTypescript size={28} />,
-  SiReact: <SiReact size={28} />,
-  SiNextdotjs: <SiNextdotjs size={28} />,
-  SiTailwindcss: <SiTailwindcss size={28} />,
-  SiNodedotjs: <SiNodedotjs size={28} />,
-  SiPython: <SiPython size={28} />,
-  SiDjango: <SiDjango size={28} />,
-  SiPhp: <SiPhp size={28} />,
-  SiOpenjdk: <SiOpenjdk size={28} />,
-  SiWordpress: <SiWordpress size={28} />,
-  SiMysql: <SiMysql size={28} />,
-  SiSqlite: <SiSqlite size={28} />,
-  SiGit: <SiGit size={28} />,
-  SiDocker: <SiDocker size={28} />,
-  SiLinux: <SiLinux size={28} />,
-  SiAndroidstudio: <SiAndroidstudio size={28} />,
-  VscVscode: <VscVscode size={28} />,
-};
+const groupes = [
+  {
+    titre: "Compétences techniques",
+    intro:
+      "Les savoir-faire d'ingénierie sur lesquels reposent mes réalisations.",
+    items: competencesTechniques,
+  },
+  {
+    titre: "Compétences humaines",
+    intro:
+      "Les compétences transversales qui conditionnent la qualité de mon travail technique.",
+    items: competencesHumaines,
+  },
+];
 
-const carteIconesHumaines: Record<string, React.ReactNode> = {
-  FaUsers: <FaUsers size={24} />,
-  FaComments: <FaComments size={24} />,
-  FaTasks: <FaTasks size={24} />,
-  FaLightbulb: <FaLightbulb size={24} />,
-  FaSyncAlt: <FaSyncAlt size={24} />,
-};
+function CarteCompetence({
+  competence,
+  delai,
+}: {
+  competence: Competence;
+  delai: number;
+}) {
+  return (
+    <SectionAnimee delai={delai}>
+      <Link href={`/competences/${competence.slug}`} className={styles.carte}>
+        <div className={styles.entete}>
+          <span className="pastilleIcone">
+            <IconeCompetence nom={competence.icone} taille={24} />
+          </span>
+          <div>
+            <h3 className={styles.nom}>{competence.nom}</h3>
+            <p className={styles.categorie}>{competence.categorie}</p>
+          </div>
+        </div>
+
+        <p className={styles.resume}>{competence.resume}</p>
+
+        <div className={styles.blocNiveau}>
+          <div className={styles.ligneNiveau}>
+            <span className={styles.libelleNiveau}>Niveau de maîtrise</span>
+            <span className={styles.valeurNiveau}>{competence.niveau}%</span>
+          </div>
+          <div
+            className={styles.jauge}
+            role="meter"
+            aria-valuenow={competence.niveau}
+            aria-valuemin={0}
+            aria-valuemax={100}
+            aria-label={`Niveau de maîtrise : ${competence.nom}`}
+          >
+            <div
+              className={styles.remplissage}
+              style={{ width: `${competence.niveau}%` }}
+            />
+          </div>
+        </div>
+
+        <span className={styles.invite}>
+          Lire l&apos;article <FaArrowRight size={12} />
+        </span>
+      </Link>
+    </SectionAnimee>
+  );
+}
 
 export default function CompetencesPage() {
   return (
-    <div className="py-20">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="section">
+      <div className="conteneur">
         <SectionAnimee>
-          <div className="text-center mb-16">
-            <h1
-              className="text-4xl sm:text-5xl font-bold"
-              style={{ fontFamily: "var(--font-poppins)" }}
-            >
-              Mes <span className="gradient-text">Compétences</span>
+          <div className="entetePage">
+            <h1 className="titrePage">
+              Mes <span className="accent">Compétences</span>
             </h1>
-            <p className="mt-4 text-gray-500 max-w-2xl mx-auto text-lg">
-              Un aperçu de mes compétences techniques et humaines, développées
-              au fil de ma formation et de mes expériences professionnelles.
+            <p className="introPage">
+              Dix compétences, réparties entre savoir-faire techniques et
+              compétences humaines. Chacune fait l&apos;objet d&apos;un article
+              détaillé : ma définition, mes éléments de preuve, mon autocritique
+              et mon évolution.
             </p>
           </div>
         </SectionAnimee>
 
-        {/* Compétences techniques par catégorie */}
-        {competencesTechniques.map((categorie, indexCat) => (
-          <div key={categorie.nom} className="mb-16">
+        {groupes.map((groupe) => (
+          <section key={groupe.titre} className={styles.groupe}>
             <SectionAnimee>
-              <h2
-                className="text-2xl font-bold mb-8 gradient-text"
-                style={{ fontFamily: "var(--font-poppins)" }}
-              >
-                {categorie.nom}
-              </h2>
+              <h2 className={styles.titreGroupe}>{groupe.titre}</h2>
+              <p className={styles.introGroupe}>{groupe.intro}</p>
             </SectionAnimee>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {categorie.competences.map((competence, index) => (
-                <SectionAnimee
-                  key={competence.nom}
-                  delai={(indexCat * 0.05) + (index * 0.05)}
-                >
-                  <div className="gradient-border p-5 h-full">
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-violet-500 to-pink-500 flex items-center justify-center text-white shrink-0">
-                        {carteIconesTech[competence.icone]}
-                      </div>
-                      <div>
-                        <h3 className="font-bold text-gray-900">
-                          {competence.nom}
-                        </h3>
-                        <p className="mt-1 text-sm text-gray-500 leading-relaxed">
-                          {competence.description}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </SectionAnimee>
+            <div className="grille">
+              {groupe.items.map((competence, index) => (
+                <CarteCompetence
+                  key={competence.slug}
+                  competence={competence}
+                  delai={index * 0.05}
+                />
               ))}
             </div>
-          </div>
+          </section>
         ))}
-
-        {/* Compétences humaines */}
-        <SectionAnimee>
-          <h2
-            className="text-2xl font-bold mb-8 gradient-text"
-            style={{ fontFamily: "var(--font-poppins)" }}
-          >
-            Compétences Humaines
-          </h2>
-        </SectionAnimee>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {competencesHumaines.map((competence, index) => (
-            <SectionAnimee key={competence.nom} delai={index * 0.05}>
-              <div className="gradient-border p-5 h-full">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-violet-500 to-pink-500 flex items-center justify-center text-white shrink-0">
-                    {carteIconesHumaines[competence.icone]}
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-gray-900">
-                      {competence.nom}
-                    </h3>
-                    <p className="mt-1 text-sm text-gray-500 leading-relaxed">
-                      {competence.description}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </SectionAnimee>
-          ))}
-        </div>
       </div>
     </div>
   );

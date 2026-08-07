@@ -47,13 +47,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="fr"
-      className={`${inter.variable} ${poppins.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">
+    <html lang="fr" className={`${inter.variable} ${poppins.variable}`}>
+      <body>
         <BarreNavigation />
-        <main className="flex-1 pt-16">{children}</main>
+        <main className="contenuPrincipal">{children}</main>
         <PiedDePage />
       </body>
     </html>
