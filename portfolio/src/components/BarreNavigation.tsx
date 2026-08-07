@@ -11,6 +11,7 @@ import styles from "./BarreNavigation.module.css";
 
 const liens = [
   { href: "/", label: "Accueil" },
+  { href: "/a-propos", label: "À propos" },
   { href: "/projets", label: "Projets" },
   { href: "/competences", label: "Compétences", sousMenu: true },
   { href: "/contact", label: "Contact" },

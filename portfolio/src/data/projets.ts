@@ -63,7 +63,7 @@ export const projets: Projet[] = [
     description:
       "Application web de GMAO inspirée de Solitech, développée avec Django, permettant la gestion complète de la maintenance des équipements industriels.",
     contexte:
-      "Ce projet a été réalisé dans le cadre de ma formation. L'objectif était de concevoir une application web de Gestion de Maintenance Assistée par Ordinateur (GMAO) similaire à Solitech, permettant aux entreprises de planifier, suivre et optimiser la maintenance de leurs équipements et installations.",
+      "Ce projet est réalisé en entreprise, dans le cadre de mon alternance. Le développement était déjà engagé lorsque j'ai repris le poste : ma première tâche a été de comprendre le besoin auprès des personnes concernées avant même d'ouvrir le code existant. L'application couvre la gestion de maintenance assistée par ordinateur (GMAO) et permet de planifier, suivre et optimiser la maintenance des équipements et installations.",
     poste: "Développeur Full Stack",
     objectifs: [
       "Développer une application web GMAO complète avec le framework Django",

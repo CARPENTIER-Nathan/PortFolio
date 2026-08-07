@@ -1,0 +1,263 @@
+/* Disposition : photo fixe à gauche, contenu défilant à droite.
+   align-items: flex-start est indispensable — sans lui, la colonne de
+   gauche s'étirerait sur toute la hauteur et position: sticky n'aurait
+   aucune marge de manœuvre. */
+.disposition {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .disposition {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+}
+
+.colonnePhoto {
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .colonnePhoto {
+    position: sticky;
+    top: calc(var(--hauteur-navigation) + 2rem);
+  }
+}
+
+.photo {
+  position: relative;
+  width: 12rem;
+  height: 15rem;
+  border-radius: var(--rayon-l);
+  overflow: hidden;
+  border: 4px solid var(--blanc);
+  box-shadow: var(--ombre-l);
+}
+
+@media (min-width: 768px) {
+  .photo {
+    width: 14rem;
+    height: 18rem;
+  }
+}
+
+.photo img {
+  object-fit: cover;
+  object-position: top;
+}
+
+/* Colonne de contenu, celle qui défile */
+.contenu {
+  flex: 1;
+  min-width: 0;
+  max-width: 48rem;
+}
+
+/* Accroche */
+.accroche {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid var(--gris-200);
+}
+
+.titreAccroche {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.accroche p {
+  font-size: 1.125rem;
+  color: var(--gris-600);
+}
+
+/* Sections */
+.section {
+  margin-top: 3.5rem;
+}
+
+.titreSection {
+  margin-bottom: 0.5rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.introSection {
+  margin-bottom: 2rem;
+  color: var(--gris-500);
+}
+
+.paragraphe {
+  color: var(--gris-600);
+}
+
+/* Valeurs */
+.valeurs {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  /* compense l'absence de phrase d'introduction sous le titre */
+  margin-top: 1.5rem;
+}
+
+.valeur {
+  padding: 1.5rem;
+  border: 1px solid var(--gris-200);
+  border-left: 4px solid var(--violet);
+  border-radius: 0 var(--rayon-l) var(--rayon-l) 0;
+  background: var(--blanc);
+}
+
+.titreValeur {
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+/* Projet professionnel */
+.etapes {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.etape {
+  padding-left: 1.5rem;
+  border-left: 2px solid var(--violet-bordure);
+}
+
+.horizon {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  padding: 0.125rem 0.75rem;
+  border-radius: 999px;
+  background: var(--violet-pale);
+  color: var(--violet-fonce);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Qualités humaines */
+.qualites {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .qualites {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.qualite {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  border: 1px solid var(--gris-200);
+  border-radius: var(--rayon-l);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.qualite:hover {
+  border-color: var(--violet-clair);
+  box-shadow: var(--ombre-m);
+}
+
+.titreQualite {
+  margin-bottom: 0.5rem;
+  font-size: 1.0625rem;
+  font-weight: 700;
+}
+
+.texteQualite {
+  flex: 1;
+  font-size: 0.9375rem;
+  color: var(--gris-600);
+}
+
+.lienQualite {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  margin-top: 1rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--violet);
+}
+
+.lienQualite:hover {
+  color: var(--violet-fonce);
+}
+
+/* Centres d'intérêt */
+.interets {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .interets {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.interet {
+  display: flex;
+  gap: 1rem;
+  padding: 1.25rem;
+  border: 1px solid var(--gris-200);
+  border-radius: var(--rayon-l);
+}
+
+.iconeInteret {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--rayon-s);
+  background: var(--violet-pale);
+  color: var(--violet);
+}
+
+.titreInteret {
+  margin-bottom: 0.375rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.texteInteret {
+  font-size: 0.9375rem;
+  color: var(--gris-600);
+}
+
+/* Appel de fin */
+.fin {
+  margin-top: 3.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--gris-200);
+  text-align: center;
+}
+
+.texteFin {
+  margin-bottom: 1.5rem;
+  color: var(--gris-600);
+}
+
+.actionsFin {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
