@@ -1,0 +1,94 @@
+/* La frise : un axe vertical continu, tracé derrière les pastilles d'année et
+   les repères des entrées. Tous sont centrés sur 1rem, quelle que soit la
+   largeur d'écran — d'où l'axe fixé à calc(1rem - 1px) pour ses 2px de large.
+   L'axe court sur toute la liste plutôt que par groupe, pour ne pas se rompre
+   entre deux années. */
+
+.frise {
+  position: relative;
+}
+
+.frise::after {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  bottom: 3rem;
+  left: calc(1rem - 1px);
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    var(--violet-bordure),
+    var(--gris-200)
+  );
+}
+
+.groupe {
+  padding-bottom: 1.5rem;
+}
+
+.groupe:last-child {
+  padding-bottom: 0;
+}
+
+/* La pastille d'année est centrée sur l'axe et l'interrompt visuellement :
+   son fond opaque marque la césure entre deux années. */
+.enTeteAnnee {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.annee {
+  position: absolute;
+  left: 1rem;
+  z-index: 1;
+  transform: translateX(-50%);
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  background: var(--violet);
+  color: var(--blanc);
+  font-family: var(--police-titre);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.compte {
+  margin-left: 3.5rem;
+  font-size: 0.8125rem;
+  color: var(--gris-500);
+}
+
+/* Les entrées d'une même année. L'indentation est portée par .entree, qui
+   place son repère sur l'axe : rien à décaler ici. */
+.etapes {
+  position: relative;
+}
+
+@media (min-width: 640px) {
+  .compte {
+    margin-left: 4.5rem;
+  }
+}
+
+.fin {
+  margin-top: 4rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--gris-200);
+  text-align: center;
+}
+
+.texteFin {
+  margin: 0 auto 1.5rem;
+  max-width: 36rem;
+  color: var(--gris-500);
+}
+
+.actionsFin {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}

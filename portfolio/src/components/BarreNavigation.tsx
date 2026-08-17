@@ -6,26 +6,66 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { HiMenu, HiX, HiChevronDown } from "react-icons/hi";
 import { competencesTechniques, competencesHumaines } from "@/data/competences";
+import { projets } from "@/data/projets";
 import { personnel } from "@/data/personnel";
 import styles from "./BarreNavigation.module.css";
 
-const liens = [
+interface GroupeSousMenu {
+  titre: string;
+  items: { slug: string; nom: string }[];
+}
+
+interface Lien {
+  href: string;
+  label: string;
+  groupes?: GroupeSousMenu[];
+}
+
+const liens: Lien[] = [
   { href: "/", label: "Accueil" },
   { href: "/a-propos", label: "À propos" },
-  { href: "/projets", label: "Projets" },
-  { href: "/competences", label: "Compétences", sousMenu: true },
+  { href: "/parcours", label: "Parcours" },
+  {
+    href: "/projets",
+    label: "Projets",
+    groupes: [
+      {
+        titre: "Réalisations",
+        items: projets.map((projet) => ({
+          slug: projet.slug,
+          nom: projet.titre,
+        })),
+      },
+    ],
+  },
+  {
+    href: "/competences",
+    label: "Compétences",
+    groupes: [
+      {
+        titre: "Techniques",
+        items: competencesTechniques.map((competence) => ({
+          slug: competence.slug,
+          nom: competence.nom,
+        })),
+      },
+      {
+        titre: "Humaines",
+        items: competencesHumaines.map((competence) => ({
+          slug: competence.slug,
+          nom: competence.nom,
+        })),
+      },
+    ],
+  },
   { href: "/contact", label: "Contact" },
-];
-
-const groupesCompetences = [
-  { titre: "Techniques", items: competencesTechniques },
-  { titre: "Humaines", items: competencesHumaines },
 ];
 
 export default function BarreNavigation() {
   const cheminActuel = usePathname();
   const [menuMobileOuvert, setMenuMobileOuvert] = useState(false);
-  const [sousMenuOuvert, setSousMenuOuvert] = useState(false);
+  // href du lien dont le sous-menu est déployé, null si aucun
+  const [sousMenuOuvert, setSousMenuOuvert] = useState<string | null>(null);
 
   const estActif = (href: string) =>
     href === "/" ? cheminActuel === "/" : cheminActuel.startsWith(href);
@@ -51,12 +91,12 @@ export default function BarreNavigation() {
           {/* Navigation bureau */}
           <div className={styles.liensBureau}>
             {liens.map((lien) =>
-              lien.sousMenu ? (
+              lien.groupes ? (
                 <div
                   key={lien.href}
                   className={styles.zoneSousMenu}
-                  onMouseEnter={() => setSousMenuOuvert(true)}
-                  onMouseLeave={() => setSousMenuOuvert(false)}
+                  onMouseEnter={() => setSousMenuOuvert(lien.href)}
+                  onMouseLeave={() => setSousMenuOuvert(null)}
                 >
                   <Link
                     href={lien.href}
@@ -68,28 +108,27 @@ export default function BarreNavigation() {
                     <HiChevronDown size={16} />
                   </Link>
 
-                  {sousMenuOuvert && (
+                  {sousMenuOuvert === lien.href && (
                     <div className={styles.sousMenu}>
                       <div className={styles.panneauSousMenu}>
-                        {groupesCompetences.map((groupe) => (
+                        {lien.groupes.map((groupe) => (
                           <div
                             key={groupe.titre}
                             className={styles.groupeSousMenu}
                           >
                             <p className={styles.titreGroupe}>{groupe.titre}</p>
-                            {groupe.items.map((competence) => (
+                            {groupe.items.map((item) => (
                               <Link
-                                key={competence.slug}
-                                href={`/competences/${competence.slug}`}
-                                onClick={() => setSousMenuOuvert(false)}
+                                key={item.slug}
+                                href={`${lien.href}/${item.slug}`}
+                                onClick={() => setSousMenuOuvert(null)}
                                 className={`${styles.lienSousMenu} ${
-                                  cheminActuel ===
-                                  `/competences/${competence.slug}`
+                                  cheminActuel === `${lien.href}/${item.slug}`
                                     ? styles.lienSousMenuActif
                                     : ""
                                 }`}
                               >
-                                {competence.nom}
+                                {item.nom}
                               </Link>
                             ))}
                           </div>
@@ -139,19 +178,19 @@ export default function BarreNavigation() {
                 {lien.label}
               </Link>
 
-              {lien.sousMenu && (
+              {lien.groupes && (
                 <div className={styles.sousMenuMobile}>
-                  {groupesCompetences.map((groupe) => (
+                  {lien.groupes.map((groupe) => (
                     <div key={groupe.titre}>
                       <p className={styles.titreGroupe}>{groupe.titre}</p>
-                      {groupe.items.map((competence) => (
+                      {groupe.items.map((item) => (
                         <Link
-                          key={competence.slug}
-                          href={`/competences/${competence.slug}`}
+                          key={item.slug}
+                          href={`${lien.href}/${item.slug}`}
                           onClick={() => setMenuMobileOuvert(false)}
                           className={styles.lienSousMenu}
                         >
-                          {competence.nom}
+                          {item.nom}
                         </Link>
                       ))}
                     </div>

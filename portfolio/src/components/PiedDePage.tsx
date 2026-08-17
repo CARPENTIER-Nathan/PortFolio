@@ -6,6 +6,7 @@ import styles from "./PiedDePage.module.css";
 const liensNavigation = [
   { href: "/", label: "Accueil" },
   { href: "/a-propos", label: "À propos" },
+  { href: "/parcours", label: "Parcours" },
   { href: "/projets", label: "Projets" },
   { href: "/competences", label: "Compétences" },
   { href: "/contact", label: "Contact" },
