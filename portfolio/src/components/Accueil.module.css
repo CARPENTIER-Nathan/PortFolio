@@ -92,7 +92,6 @@
   color: var(--violet);
 }
 
-/* Photo de profil */
 .cadrePhoto {
   position: relative;
   flex-shrink: 0;

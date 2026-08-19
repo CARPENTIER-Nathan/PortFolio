@@ -17,7 +17,6 @@ const icones = {
   certification: FaCertificate,
 };
 
-/** Initiales du lieu, affichées tant qu'aucun logo n'est fourni. */
 function initiales(lieu: string): string {
   return lieu
     .split(/\s+/)
@@ -42,7 +41,6 @@ export default function EntreeParcours({ etape }: { etape: Etape }) {
     .map((slug) => competences.find((competence) => competence.slug === slug))
     .filter((competence) => competence !== undefined);
 
-  // Une certification n'a qu'un niveau de lecture : date et intitulé.
   const detaillable =
     etape.type !== "certification" &&
     ((etape.detail && etape.detail.length > 0) ||
@@ -58,13 +56,13 @@ export default function EntreeParcours({ etape }: { etape: Etape }) {
 
   return (
     <li className={styles.entree}>
-      {/* Repère sur l'axe */}
+
       <span className={`${styles.point} ${enCours ? styles.pointActif : ""}`}>
         <Icone size={12} />
       </span>
 
       <div className={`${styles.bloc} ${ouvert ? styles.blocOuvert : ""}`}>
-        {/* 1er niveau de lecture */}
+
         <div className={styles.enTete}>
           <span className={styles.logo}>
             {etape.siteLieu ? (
@@ -128,7 +126,6 @@ export default function EntreeParcours({ etape }: { etape: Etape }) {
           )}
         </div>
 
-        {/* 2e niveau de lecture */}
         {detaillable && (
           <AnimatePresence initial={false}>
             {ouvert && (

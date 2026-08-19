@@ -12,7 +12,7 @@ export default function Accueil() {
     <section className={styles.accueil}>
       <div className="conteneur">
         <div className={styles.disposition}>
-          {/* Contenu texte */}
+
           <div className={styles.texte}>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -92,7 +92,6 @@ export default function Accueil() {
             </motion.div>
           </div>
 
-          {/* Photo de profil */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}

@@ -16,7 +16,6 @@
   height: var(--hauteur-navigation);
 }
 
-/* Identité : photo + nom, présents sur toutes les pages */
 .identite {
   display: flex;
   align-items: center;
@@ -46,7 +45,6 @@
   color: var(--violet);
 }
 
-/* Navigation bureau */
 .liensBureau {
   display: none;
   align-items: center;
@@ -86,7 +84,6 @@
   color: var(--blanc);
 }
 
-/* Sous-menu déroulant des compétences */
 .zoneSousMenu {
   position: relative;
 }
@@ -144,7 +141,6 @@
   font-weight: 600;
 }
 
-/* Menu mobile */
 .boutonMobile {
   display: flex;
   align-items: center;

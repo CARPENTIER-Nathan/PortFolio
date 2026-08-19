@@ -29,7 +29,6 @@ export default function ParcoursPage() {
           </div>
         </SectionAnimee>
 
-        {/* La frise : un axe vertical continu, les étapes groupées par année */}
         <SectionAnimee>
           <ol className={styles.frise}>
             {parcoursParAnnee.map((groupe) => (

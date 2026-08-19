@@ -13,7 +13,6 @@
   color: var(--gris-500);
 }
 
-/* Carte de compétence */
 .carte {
   display: flex;
   flex-direction: column;
@@ -59,7 +58,6 @@
   color: var(--gris-500);
 }
 
-/* Niveau de maîtrise */
 .blocNiveau {
   margin-top: 1.25rem;
 }

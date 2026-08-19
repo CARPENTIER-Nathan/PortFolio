@@ -217,7 +217,6 @@ export default async function PageProjet({ params }: PageProps) {
           </div>
         </SectionAnimee>
 
-        {/* Compétences rattachées — navigation circulaire */}
         {competencesLiees.length > 0 && (
           <SectionAnimee delai={0.1}>
             <section className={styles.sectionLiee}>

@@ -6,7 +6,6 @@ import {
 } from "@/data/competences";
 import styles from "./SchemaCompetences.module.css";
 
-/** Graduations de l'échelle, en pourcentage. */
 const REPERES = [0, 25, 50, 75, 100];
 
 const LIBELLES: Record<Competence["domaine"], string> = {
@@ -22,9 +21,6 @@ function moyenne(liste: Competence[]): number {
 }
 
 export default function SchemaCompetences() {
-  /* Classement décroissant, tous domaines confondus. L'étendue des niveaux
-     restant modeste, la seule longueur des barres discrimine mal : l'ordre
-     vertical porte donc autant la hiérarchie que la barre elle-même. */
   const classees = competencesClassees;
 
   const domaines = (["technique", "humaine"] as const).map((domaine) => {
@@ -67,8 +63,7 @@ export default function SchemaCompetences() {
               <span className={styles.identite}>
                 <span className={styles.rang}>{rang + 1}</span>
                 <span className={styles.nom}>{competence.nom}</span>
-                {/* Le domaine est écrit, pas seulement porté par la couleur :
-                    le schéma reste lisible en daltonisme comme à l'impression. */}
+
                 <span
                   className={styles.domaine}
                   data-domaine={competence.domaine}
@@ -91,8 +86,6 @@ export default function SchemaCompetences() {
         ))}
       </ol>
 
-      {/* Échelle explicite : sans elle, la longueur des barres ne se rapporte
-          à rien et l'écart entre deux compétences n'est pas interprétable. */}
       <div className={styles.echelle} aria-hidden="true">
         <span className={styles.graduations}>
           {REPERES.map((repere) => (

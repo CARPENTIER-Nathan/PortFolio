@@ -1,21 +1,10 @@
-/* ==========================================================================
-   Feuille de style globale
-   Variables de thème, réinitialisation, styles de base et primitives de mise
-   en page. Tout le reste est isolé dans des modules CSS par composant.
-   ========================================================================== */
-
 :root {
-  /* Couleurs principales */
   --violet: #7c3aed;
   --violet-fonce: #6d28d9;
   --violet-clair: #a78bfa;
   --violet-pale: #f5f3ff;
   --violet-bordure: #ddd6fe;
 
-  /* Domaines de compétence — distinguent les deux familles dans le schéma
-     synthétique. Le violet reste la couleur du technique, cœur du profil ;
-     le sarcelle s'en sépare par la teinte et par la clarté, donc reste
-     discernable en vision daltonienne. */
   --domaine-technique: #7c3aed;
   --domaine-technique-pale: #f5f3ff;
   --domaine-technique-fonce: #6d28d9;
@@ -23,7 +12,6 @@
   --domaine-humaine-pale: #f0fdfa;
   --domaine-humaine-fonce: #0f766e;
 
-  /* Niveaux de gris */
   --blanc: #ffffff;
   --gris-50: #f9fafb;
   --gris-100: #f3f4f6;
@@ -33,11 +21,9 @@
   --gris-600: #4b5563;
   --gris-900: #111827;
 
-  /* Typographie */
   --police-texte: var(--font-inter), Arial, Helvetica, sans-serif;
   --police-titre: var(--font-poppins), var(--font-inter), sans-serif;
 
-  /* Rayons et ombres */
   --rayon-s: 0.5rem;
   --rayon-m: 0.75rem;
   --rayon-l: 1rem;
@@ -45,14 +31,9 @@
   --ombre-m: 0 4px 12px rgba(17, 24, 39, 0.08);
   --ombre-l: 0 12px 28px rgba(17, 24, 39, 0.12);
 
-  /* Gabarit */
   --largeur-max: 72rem;
   --hauteur-navigation: 4rem;
 }
-
-/* --------------------------------------------------------------------------
-   Réinitialisation
-   -------------------------------------------------------------------------- */
 
 *,
 *::before,
@@ -117,7 +98,6 @@ button {
   color: inherit;
 }
 
-/* Accessibilité : cible de focus visible au clavier */
 a:focus-visible,
 button:focus-visible {
   outline: 2px solid var(--violet);
@@ -125,16 +105,11 @@ button:focus-visible {
   border-radius: var(--rayon-s);
 }
 
-/* --------------------------------------------------------------------------
-   Gabarit principal
-   -------------------------------------------------------------------------- */
-
 .contenuPrincipal {
   flex: 1;
   padding-top: var(--hauteur-navigation);
 }
 
-/* Conteneur centré, utilisé par toutes les pages */
 .conteneur {
   width: 100%;
   max-width: var(--largeur-max);
@@ -166,11 +141,6 @@ button:focus-visible {
   background: var(--gris-50);
 }
 
-/* --------------------------------------------------------------------------
-   Éléments partagés
-   -------------------------------------------------------------------------- */
-
-/* Accentuation d'un mot dans un titre */
 .accent {
   color: var(--violet);
 }
@@ -198,7 +168,6 @@ button:focus-visible {
   }
 }
 
-/* Carte générique : bordure grise, mise en avant au survol */
 .carte {
   background: var(--blanc);
   border: 1px solid var(--gris-200);
@@ -211,7 +180,6 @@ button:focus-visible {
   box-shadow: var(--ombre-m);
 }
 
-/* Pastille d'icône */
 .pastilleIcone {
   display: flex;
   align-items: center;
@@ -224,7 +192,6 @@ button:focus-visible {
   color: var(--blanc);
 }
 
-/* Boutons */
 .bouton {
   display: inline-flex;
   align-items: center;
@@ -255,7 +222,6 @@ button:focus-visible {
   color: var(--violet);
 }
 
-/* Lien fléché discret */
 .lienFleche {
   display: inline-flex;
   align-items: center;
@@ -269,7 +235,6 @@ button:focus-visible {
   color: var(--violet-fonce);
 }
 
-/* Étiquette de technologie */
 .etiquette {
   display: inline-block;
   padding: 0.25rem 0.75rem;
@@ -281,7 +246,6 @@ button:focus-visible {
   font-weight: 500;
 }
 
-/* Grille de cartes responsive */
 .grille {
   display: grid;
   grid-template-columns: 1fr;
@@ -300,8 +264,6 @@ button:focus-visible {
   }
 }
 
-/* Variante de .grille : mêmes colonnes, mais une dernière ligne incomplète
-   reste centrée au lieu de laisser une carte seule à gauche. */
 .grilleCentree {
   display: flex;
   flex-wrap: wrap;
@@ -325,7 +287,6 @@ button:focus-visible {
   }
 }
 
-/* Troncature de texte sur n lignes */
 .tronque2 {
   display: -webkit-box;
   -webkit-line-clamp: 2;

@@ -64,7 +64,7 @@ const liens: Lien[] = [
 export default function BarreNavigation() {
   const cheminActuel = usePathname();
   const [menuMobileOuvert, setMenuMobileOuvert] = useState(false);
-  // href du lien dont le sous-menu est déployé, null si aucun
+
   const [sousMenuOuvert, setSousMenuOuvert] = useState<string | null>(null);
 
   const estActif = (href: string) =>
@@ -88,7 +88,6 @@ export default function BarreNavigation() {
             </span>
           </Link>
 
-          {/* Navigation bureau */}
           <div className={styles.liensBureau}>
             {liens.map((lien) =>
               lien.groupes ? (
@@ -151,7 +150,6 @@ export default function BarreNavigation() {
             )}
           </div>
 
-          {/* Bascule mobile */}
           <button
             className={styles.boutonMobile}
             onClick={() => setMenuMobileOuvert(!menuMobileOuvert)}
@@ -163,7 +161,6 @@ export default function BarreNavigation() {
         </div>
       </div>
 
-      {/* Menu mobile */}
       {menuMobileOuvert && (
         <div className={styles.panneauMobile}>
           {liens.map((lien) => (

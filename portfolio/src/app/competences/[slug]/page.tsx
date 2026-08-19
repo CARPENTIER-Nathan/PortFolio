@@ -52,14 +52,13 @@ export default async function PageCompetence({ params }: PageProps) {
         </SectionAnimee>
 
         <div className={styles.disposition}>
-          {/* Sous-menu des compétences */}
+
           <aside className={styles.colonneMenu}>
             <div className={styles.menuCollant}>
               <SousMenuCompetences slugActuel={competence.slug} />
             </div>
           </aside>
 
-          {/* Article */}
           <article className={styles.article}>
             <SectionAnimee>
               <header>
@@ -91,7 +90,6 @@ export default async function PageCompetence({ params }: PageProps) {
               </header>
             </SectionAnimee>
 
-            {/* 1. Ma définition */}
             <SectionAnimee delai={0.05}>
               <section className={styles.section}>
                 <h2 className={styles.titreSection}>Ma définition</h2>
@@ -112,7 +110,6 @@ export default async function PageCompetence({ params }: PageProps) {
               </section>
             </SectionAnimee>
 
-            {/* 2. Mes éléments de preuve */}
             <SectionAnimee delai={0.05}>
               <section className={styles.section}>
                 <h2 className={styles.titreSection}>Mes éléments de preuve</h2>
@@ -176,7 +173,6 @@ export default async function PageCompetence({ params }: PageProps) {
               </section>
             </SectionAnimee>
 
-            {/* 3. Mon autocritique */}
             <SectionAnimee delai={0.05}>
               <section className={styles.section}>
                 <h2 className={styles.titreSection}>Mon autocritique</h2>
@@ -221,7 +217,6 @@ export default async function PageCompetence({ params }: PageProps) {
               </section>
             </SectionAnimee>
 
-            {/* 4. Mon évolution */}
             <SectionAnimee delai={0.05}>
               <section className={styles.section}>
                 <h2 className={styles.titreSection}>
@@ -254,7 +249,6 @@ export default async function PageCompetence({ params }: PageProps) {
               </section>
             </SectionAnimee>
 
-            {/* 5. Réalisations rattachées — navigation circulaire */}
             <SectionAnimee delai={0.05}>
               <section className={styles.sectionLiee}>
                 <h2 className={styles.titreSection}>

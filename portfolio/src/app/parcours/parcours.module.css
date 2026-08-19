@@ -1,9 +1,3 @@
-/* La frise : un axe vertical continu, tracé derrière les pastilles d'année et
-   les repères des entrées. Tous sont centrés sur 1rem, quelle que soit la
-   largeur d'écran — d'où l'axe fixé à calc(1rem - 1px) pour ses 2px de large.
-   L'axe court sur toute la liste plutôt que par groupe, pour ne pas se rompre
-   entre deux années. */
-
 .frise {
   position: relative;
 }
@@ -30,8 +24,6 @@
   padding-bottom: 0;
 }
 
-/* La pastille d'année est centrée sur l'axe et l'interrompt visuellement :
-   son fond opaque marque la césure entre deux années. */
 .enTeteAnnee {
   position: relative;
   display: flex;
@@ -61,8 +53,6 @@
   color: var(--gris-500);
 }
 
-/* Les entrées d'une même année. L'indentation est portée par .entree, qui
-   place son repère sur l'axe : rien à décaler ici. */
 .etapes {
   position: relative;
 }

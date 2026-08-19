@@ -1,10 +1,3 @@
-/* Schéma synthétique : les dix compétences sur une même échelle, classées.
-   La grille de colonnes est partagée par les barres et par l'échelle du bas,
-   d'où les mêmes valeurs répétées dans .ligne et .echelle. */
-
-/* Bloc volontairement plus étroit que le conteneur : au-delà, les barres
-   s'étirent sans rien apporter à la lecture, alors que les intitulés — jusqu'à
-   « Conception de bases de données » — ont besoin de place. */
 .schema {
   max-width: 60rem;
   margin: 0 auto 4rem;
@@ -29,8 +22,6 @@
   color: var(--gris-500);
   font-size: 0.9375rem;
 }
-
-/* --- Légende --------------------------------------------------------------- */
 
 .legende {
   display: flex;
@@ -72,8 +63,6 @@
   font-size: 0.75rem;
 }
 
-/* --- Barres ---------------------------------------------------------------- */
-
 .barres {
   display: flex;
   flex-direction: column;
@@ -108,8 +97,6 @@
   font-variant-numeric: tabular-nums;
 }
 
-/* flex: 1 pousse l'étiquette de domaine au bout de la colonne : sans lui, elle
-   colle à l'intitulé et les étiquettes se décalent d'une ligne à l'autre. */
 .nom {
   flex: 1;
   min-width: 0;
@@ -120,9 +107,6 @@
   white-space: nowrap;
 }
 
-/* min-width commune aux deux libellés : « Technique » étant plus large que
-   « Humaine », l'alignement à droite ne suffirait pas à aligner leurs bords
-   gauches. */
 .domaine {
   flex-shrink: 0;
   min-width: 5.25rem;
@@ -149,10 +133,6 @@
   border-radius: 999px;
 }
 
-/* Graduations tous les 25 %, tracées par-dessus le remplissage : posées en
-   fond de piste, elles disparaîtraient sous la partie colorée et l'échelle
-   ne vaudrait plus que pour la portion vide. Le gris translucide reste
-   lisible aussi bien sur la piste claire que sur la barre colorée. */
 .piste::after {
   content: "";
   position: absolute;
@@ -172,10 +152,6 @@
   text-align: right;
 }
 
-/* --- Échelle --------------------------------------------------------------- */
-
-/* Sur mobile les barres sont pleine largeur : l'échelle l'est aussi. Au-delà,
-   elle se cale sous la seule colonne des barres (voir la media query). */
 .echelle {
   margin-top: 0.75rem;
   padding: 0 0.5rem;
@@ -188,10 +164,6 @@
   font-size: 0.6875rem;
   font-variant-numeric: tabular-nums;
 }
-
-/* --- Couleurs de domaine ---------------------------------------------------
-   Le domaine est aussi écrit sur chaque ligne : la couleur confirme, elle ne
-   porte jamais seule l'information. */
 
 [data-domaine="technique"].puce,
 [data-domaine="technique"].remplissage {
@@ -213,8 +185,6 @@
   color: var(--domaine-humaine-fonce);
 }
 
-/* --- Au-delà du mobile : nom, barre et valeur sur une seule ligne ---------- */
-
 @media (min-width: 768px) {
   .schema {
     padding: 2rem;
@@ -228,8 +198,6 @@
     align-items: center;
   }
 
-  /* Même gabarit de colonnes que .ligne : les graduations tombent exactement
-     sous les barres, sinon l'échelle ne se rapporte à rien. */
   .graduations {
     grid-column: 2;
   }

@@ -13,7 +13,6 @@ export default function Home() {
     <>
       <Accueil />
 
-      {/* Projets en vedette */}
       <section className="section sectionGrise">
         <div className="conteneur">
           <SectionAnimee>
@@ -42,7 +41,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Aperçu des compétences */}
       <section className="section">
         <div className="conteneur">
           <SectionAnimee>
@@ -73,7 +71,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Appel à l'action */}
       <section className={styles.appel}>
         <div className="conteneur">
           <SectionAnimee>

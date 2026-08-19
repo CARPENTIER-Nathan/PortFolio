@@ -17,7 +17,7 @@ export default function PiedDePage() {
     <footer className={styles.pied}>
       <div className="conteneur">
         <div className={styles.colonnes}>
-          {/* Identité */}
+
           <div>
             <h3 className={styles.marque}>
               {personnel.prenom} {personnel.nom}
@@ -25,7 +25,6 @@ export default function PiedDePage() {
             <p className={styles.titrePoste}>{personnel.titre}</p>
           </div>
 
-          {/* Navigation */}
           <div>
             <h4 className={styles.titreColonne}>Navigation</h4>
             <ul className={styles.liste}>
@@ -39,7 +38,6 @@ export default function PiedDePage() {
             </ul>
           </div>
 
-          {/* Contact */}
           <div>
             <h4 className={styles.titreColonne}>Contact</h4>
             <div className={styles.liste}>

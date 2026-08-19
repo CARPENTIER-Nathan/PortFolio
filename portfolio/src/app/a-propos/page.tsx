@@ -49,7 +49,7 @@ export default function AProposPage() {
         </SectionAnimee>
 
         <div className={styles.disposition}>
-          {/* Photo, maintenue visible pendant le défilement */}
+
           <aside className={styles.colonnePhoto}>
             <div className={styles.photo}>
               <Image
@@ -62,7 +62,6 @@ export default function AProposPage() {
             </div>
           </aside>
 
-          {/* Colonne défilante */}
           <article className={styles.contenu}>
             <SectionAnimee>
               <div className={styles.accroche}>
@@ -73,7 +72,6 @@ export default function AProposPage() {
               </div>
             </SectionAnimee>
 
-          {/* 1. Mes valeurs */}
           <SectionAnimee delai={0.05}>
             <section className={styles.section}>
               <h2 className={styles.titreSection}>Mes valeurs</h2>
@@ -89,7 +87,6 @@ export default function AProposPage() {
             </section>
           </SectionAnimee>
 
-          {/* 2. Mon projet professionnel et personnel */}
           <SectionAnimee delai={0.05}>
             <section className={styles.section}>
               <h2 className={styles.titreSection}>
@@ -103,7 +100,7 @@ export default function AProposPage() {
                   { horizon: "Professionnel", texte: projet.professionnel },
                   { horizon: "Sur le plan personnel", texte: projet.personnel },
                 ]
-                  // un horizon non rédigé ne doit pas laisser un bloc vide
+
                   .filter((etape) => etape.texte.trim() !== "")
                   .map((etape) => (
                     <div key={etape.horizon} className={styles.etape}>
@@ -117,7 +114,6 @@ export default function AProposPage() {
             </section>
           </SectionAnimee>
 
-          {/* 3. Mes principales qualités humaines */}
           <SectionAnimee delai={0.05}>
             <section className={styles.section}>
               <h2 className={styles.titreSection}>
@@ -152,7 +148,6 @@ export default function AProposPage() {
             </section>
           </SectionAnimee>
 
-          {/* 4. Mes centres d'intérêt */}
           <SectionAnimee delai={0.05}>
             <section className={styles.section}>
               <h2 className={styles.titreSection}>Mes centres d&apos;intérêt</h2>
@@ -183,7 +178,6 @@ export default function AProposPage() {
             </section>
           </SectionAnimee>
 
-          {/* Fin d'article */}
           <SectionAnimee delai={0.05}>
             <div className={styles.fin}>
               <p className={styles.texteFin}>
