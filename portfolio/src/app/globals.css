@@ -12,6 +12,17 @@
   --violet-pale: #f5f3ff;
   --violet-bordure: #ddd6fe;
 
+  /* Domaines de compétence — distinguent les deux familles dans le schéma
+     synthétique. Le violet reste la couleur du technique, cœur du profil ;
+     le sarcelle s'en sépare par la teinte et par la clarté, donc reste
+     discernable en vision daltonienne. */
+  --domaine-technique: #7c3aed;
+  --domaine-technique-pale: #f5f3ff;
+  --domaine-technique-fonce: #6d28d9;
+  --domaine-humaine: #0d9488;
+  --domaine-humaine-pale: #f0fdfa;
+  --domaine-humaine-fonce: #0f766e;
+
   /* Niveaux de gris */
   --blanc: #ffffff;
   --gris-50: #f9fafb;
@@ -286,6 +297,31 @@ button:focus-visible {
 @media (min-width: 1024px) {
   .grille {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Variante de .grille : mêmes colonnes, mais une dernière ligne incomplète
+   reste centrée au lieu de laisser une carte seule à gauche. */
+.grilleCentree {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.grilleCentree > * {
+  flex: 1 1 100%;
+}
+
+@media (min-width: 640px) {
+  .grilleCentree > * {
+    flex: 0 1 calc((100% - 1.5rem) / 2);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grilleCentree > * {
+    flex: 0 1 calc((100% - 3rem) / 3);
   }
 }
 

@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   keywords: [
     "Nathan CARPENTIER",
     "développeur",
-    "ingénierie logiciel",
+    "ingénierie logicielle",
     "portfolio",
     "React",
     "Next.js",

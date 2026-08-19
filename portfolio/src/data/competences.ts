@@ -53,14 +53,15 @@ export const competences: Competence[] = [
       "TypeScript",
       "React",
       "Next.js",
+      "Angular",
     ],
     definition: [
       "Le développement front-end désigne l'ensemble des travaux qui produisent la partie d'une application avec laquelle l'utilisateur interagit directement. Il ne se limite pas à la mise en forme : il englobe la structure sémantique du document, la gestion de l'état de l'interface, la performance de rendu, l'accessibilité et la cohérence du système de design.",
       "Dans un contexte professionnel, cette compétence se situe à la frontière entre l'ingénierie et l'usage. Le front-end est la seule couche que l'utilisateur final juge réellement : une architecture serveur irréprochable derrière une interface lente ou illisible reste perçue comme un produit défaillant. C'est pourquoi j'aborde le front-end comme un travail d'ingénieur — typage, composants réutilisables, séparation des données et de la présentation — et non comme une couche cosmétique posée en fin de projet.",
-      "Concrètement, je travaille aujourd'hui avec React et Next.js en TypeScript, en structurant systématiquement mes projets autour de composants isolés et de données découplées de l'affichage.",
+      "Concrètement, je travaille aujourd'hui avec React et Next.js en TypeScript, en structurant systématiquement mes projets autour de composants isolés et de données découplées de l'affichage, et j'ai pratiqué Angular sur l'étude de cas ShopWise.",
     ],
     actualite:
-      "L'arrivée des React Server Components, stabilisés dans les versions récentes de Next.js, redéfinit la frontière entre client et serveur : une partie croissante du rendu repart côté serveur pour alléger le JavaScript envoyé au navigateur. Cette évolution rejoint la pression réglementaire et écologique sur la sobriété numérique, ainsi que le renforcement des exigences d'accessibilité porté par l'European Accessibility Act, applicable depuis juin 2025. Le front-end n'est plus jugé sur le seul rendu visuel mais sur ce qu'il coûte à l'utilisateur et sur son accessibilité réelle.",
+      "L'arrivée des React Server Components dans les versions récentes de Next.js change la façon dont le code s'exécute : une partie du rendu se fait désormais sur le serveur plutôt que dans le navigateur, ce qui réduit la quantité de JavaScript envoyée à l'utilisateur. C'est le modèle sur lequel repose ce portfolio, où seuls les composants réellement interactifs — la navigation et les animations — s'exécutent côté client. L'autre déplacement tient à l'accessibilité, passée de la bonne pratique au critère attendu : une interface s'évalue aussi sur ce qu'elle transmet à un lecteur d'écran et sur ce qui reste compréhensible en dehors de la couleur seule. Un front-end ne se mesure donc plus à sa seule apparence, mais à son coût pour l'utilisateur et à son utilisabilité réelle.",
     anecdotes: [
       {
         titre: "Concevoir ce portfolio comme un produit, pas comme une page",
@@ -74,13 +75,13 @@ export const competences: Competence[] = [
           "J'ai transformé un site vitrine, qui aurait vieilli à la première mise à jour, en une base de contenu maintenable. C'est précisément l'arbitrage qu'on attend d'un ingénieur logiciel : investir dans la structure pour réduire le coût des évolutions futures.",
       },
       {
-        titre: "Rendre exploitable une interface de gestion de stock en mobilité",
+        titre: "Faire du scan le point d'entrée d'une application de stock",
         contexte:
-          "Sur l'application de gestion de stock, l'interface devait être utilisable dans un entrepôt : debout, parfois d'une seule main, avec l'autre occupée par un produit ou un terminal de scan.",
+          "L'application de gestion de stock a été menée à deux : mon binôme portait la gestion des produits, j'avais la création et la lecture des QR Codes. Ma partie devait rester utilisable dans les conditions de l'entrepôt : debout, souvent d'une seule main, l'autre occupée par un produit.",
         action:
-          "J'ai réduit chaque opération courante — ajout, modification, suppression d'un produit — au minimum d'étapes possibles, en plaçant les actions fréquentes dans la zone atteignable au pouce et en faisant du scan de QR Code le point d'entrée principal plutôt qu'une fonction secondaire enfouie dans un menu.",
+          "Plutôt que d'enfouir le scan dans un menu comme une fonction secondaire, j'en ai fait le point d'entrée de l'application : la lecture d'un code amène directement sur la fiche du produit correspondant, en un seul geste réalisable d'une main. Le point de jonction avec la partie de mon binôme — ce qu'un code contient et sur quel écran sa lecture renvoie — a été défini avec lui.",
         resultat:
-          "La recherche d'un produit, qui supposait une saisie manuelle, se fait par un scan unique aboutissant directement sur la fiche modifiable.",
+          "La recherche d'un produit, qui supposait auparavant un déplacement jusqu'au poste informatique puis une saisie manuelle, se fait par un scan unique aboutissant sur la fiche du produit.",
         valeurAjoutee:
           "J'ai déplacé la conception depuis « ce que le système sait faire » vers « ce que l'utilisateur fait réellement sur le terrain ». Cette lecture par l'usage est ce qui distingue une interface fonctionnelle d'une interface adoptée.",
         projetSlug: "gestion-stock-qrcode",
@@ -94,7 +95,7 @@ export const competences: Competence[] = [
       acquisition:
         "Mon passage de JavaScript à TypeScript puis à React a été rapide, parce qu'il a été guidé par des projets concrets plutôt que par des tutoriels. J'ai systématiquement appris une notion au moment où un projet en avait besoin.",
       recul:
-        "Ma faiblesse assumée porte sur les tests et l'accessibilité. J'écris des interfaces correctes mais je ne les couvre pas encore par des tests automatisés, et mon accessibilité reste intuitive plutôt que vérifiée à l'outil. Le conseil que je me donne, et que je donnerais à quelqu'un qui débute : ne pas confondre maîtriser un framework et maîtriser le front-end. Le framework change tous les trois ans, les fondamentaux HTML, CSS et accessibilité restent.",
+        "Ma faiblesse assumée porte sur les tests et l'accessibilité. Sur ShopWise, j'ai couvert les services et les composants Angular par des tests automatisés, mais c'est resté un exercice ponctuel : mes interfaces React ne le sont pas, et mon accessibilité reste intuitive plutôt que vérifiée à l'outil. Le conseil que je me donne, et que je donnerais à quelqu'un qui débute : ne pas confondre maîtriser un framework et maîtriser le front-end. Le framework change tous les trois ans, les fondamentaux HTML, CSS et accessibilité restent.",
     },
     evolution: {
       objectif:
@@ -102,10 +103,15 @@ export const competences: Competence[] = [
       formations: [
         "Approfondissement des React Server Components et des stratégies de rendu de Next.js",
         "Tests d'interface automatisés avec Testing Library et Playwright",
-        "Accessibilité web : mise à niveau sur le RGAA et les WCAG 2.2, avec audit outillé de mes propres projets",
+        "Accessibilité web : audit outillé de mes propres projets — navigation au clavier, restitution par lecteur d'écran et contrastes",
       ],
     },
-    projets: ["gestion-stock-qrcode", "gmao-django", "projet-wordpress"],
+    projets: [
+      "gestion-stock-qrcode",
+      "gmao-django",
+      "projet-wordpress",
+      "shopwise",
+    ],
   },
   {
     slug: "developpement-back-end",
@@ -113,28 +119,35 @@ export const competences: Competence[] = [
     domaine: "technique",
     categorie: "Logique métier & services",
     icone: "SiDjango",
-    niveau: 75,
+    niveau: 88,
     resume:
       "Conception de la logique métier côté serveur, des modèles de données aux règles d'accès, avec Python/Django, PHP et Java.",
-    technologies: ["Python", "Django", "PHP", "Node.js", "Java"],
+    technologies: [
+      "Python",
+      "Django",
+      "PHP",
+      "Java",
+      "Spring Boot",
+      "Node.js",
+    ],
     definition: [
       "Le développement back-end recouvre tout ce qui, hors du navigateur, produit et protège la donnée : modélisation du domaine métier, règles de gestion, authentification et autorisation, traitement des requêtes, exposition d'interfaces de programmation.",
       "En contexte professionnel, c'est la couche où les erreurs coûtent le plus cher. Une maladresse d'interface se corrige en une itération ; une modélisation de domaine erronée ou une règle d'autorisation trop permissive se paient en migrations de données, en incidents de production et parfois en fuite d'informations. Le back-end demande donc une discipline particulière : réfléchir au modèle avant d'écrire du code, et considérer que toute donnée venant de l'extérieur est hostile jusqu'à preuve du contraire.",
-      "Je travaille principalement en Python avec Django, dont l'architecture MVT et l'ORM structurent fortement le projet, et en PHP dans l'écosystème WordPress.",
+      "Je travaille principalement en Python avec Django, dont l'architecture MVT et l'ORM structurent fortement le projet, et en PHP dans l'écosystème WordPress. J'ai également exposé une API REST en Java avec Spring Boot, sur une architecture en couches.",
     ],
     actualite:
-      "L'entrée en application de la directive NIS 2 et du Cyber Resilience Act européen déplace la sécurité applicative d'une bonne pratique vers une obligation opposable, y compris pour des organisations de taille moyenne. Cela concerne directement le back-end : gestion des identités, journalisation, maîtrise des dépendances et traçabilité deviennent des exigences de conformité. Un développeur back-end aujourd'hui n'écrit plus seulement une logique qui fonctionne, mais une logique qu'il doit pouvoir justifier.",
+      "La sécurité applicative s'est déplacée en amont du cycle de développement : elle n'est plus une revue de fin de projet mais une contrainte d'écriture, à laquelle les frameworks répondent en livrant leurs protections par défaut plutôt qu'en option. Django en est un bon exemple : l'authentification, la gestion des rôles et les protections contre l'injection SQL et le CSRF sont fournies d'origine, mais leur bénéfice tient entièrement à la discipline de mise à jour de la pile qui les porte — ce qui fait de la maîtrise des dépendances une tâche courante plutôt qu'un contrôle ponctuel. Un développeur back-end n'écrit donc plus seulement une logique qui fonctionne, mais une logique dont il peut justifier les choix de sécurité.",
     anecdotes: [
       {
         titre: "Modéliser un domaine métier complexe pour une application de GMAO",
         contexte:
-          "Le projet de GMAO supposait de reproduire les fonctions clés d'un logiciel professionnel de maintenance industrielle. La difficulté centrale n'était pas l'affichage mais la modélisation : équipements, interventions préventives et correctives, techniciens, pièces détachées et historique entretiennent un réseau dense de relations, et une erreur à ce niveau contamine toute l'application.",
+          "J'ai repris la GMAO en avril 2025, sur un développement engagé depuis août 2024 : mon tuteur avait posé les premiers modèles. La difficulté centrale n'était pas l'affichage mais la modélisation — équipements, interventions, techniciens, pièces détachées et historique entretiennent un réseau dense de relations, et une erreur à ce niveau contamine toute l'application.",
         action:
-          "J'ai commencé par le modèle et non par les écrans. J'ai défini les entités et leurs relations dans l'ORM de Django avant d'écrire la moindre vue, puis je me suis appuyé sur le système d'authentification natif pour distinguer trois rôles — administrateur, technicien, responsable — chacun avec son périmètre d'accès. Le tableau de bord a été construit ensuite, à partir de requêtes ORM agrégeant l'état réel des équipements.",
+          "J'ai commencé par comprendre les modèles existants avec mon tuteur plutôt que par produire des écrans, puis je les ai affinés au fur et à mesure des fonctionnalités ajoutées, jusqu'à les porter sur l'ORM de Django lors du passage à Python en novembre 2025. J'ai ensuite construit dans l'ordre des dépendances : le socle métier — entités, clients, sites, affaires, interventions — avant les fonctions d'usage quotidien. Le système d'authentification natif de Django porte les rôles (administrateur, technicien, responsable) et le tableau de bord s'appuie sur l'ORM pour ses indicateurs.",
         resultat:
-          "L'application couvre la planification des interventions préventives et correctives, le suivi du statut des équipements et la restitution de statistiques de maintenance, sur une base de données dont les relations n'ont pas eu à être restructurées en cours de projet.",
+          "L'application couvre la planification des interventions préventives et correctives, le suivi des équipements et la restitution d'indicateurs de maintenance. Le socle métier a absorbé les fonctionnalités ajoutées ensuite sans avoir à être repris de fond en comble, et l'application est en service depuis mai 2026 dans trois entités.",
         valeurAjoutee:
-          "En investissant le temps de conception en amont plutôt qu'en corrections successives, j'ai évité le coût de migration qu'aurait entraîné une modélisation improvisée. C'est la démarche qui m'a le plus fait progresser : accepter de ne pas produire d'écran visible pendant les premières heures d'un projet.",
+          "J'ai accepté de passer du temps sur un modèle que je n'avais pas écrit avant d'y toucher, puis de construire dans l'ordre des dépendances plutôt que dans celui des écrans visibles. C'est ce qui permet d'ajouter une fonction sans payer, à chaque fois, une migration de données.",
         projetSlug: "gmao-django",
       },
       {
@@ -152,7 +165,7 @@ export const competences: Competence[] = [
     ],
     autocritique: {
       maitrise:
-        "Je suis autonome sur la conception et l'implémentation d'une application back-end complète en Django, du modèle aux vues en passant par l'authentification et les rôles. Ma maîtrise est plus inégale sur les autres écosystèmes : solide en PHP dans le cadre WordPress, plus limitée sur Node.js et Java, que j'utilise ponctuellement.",
+        "Je suis autonome sur la conception et l'implémentation d'une application back-end complète en Django, du modèle aux vues en passant par l'authentification et les rôles. Ma maîtrise est plus inégale sur les autres écosystèmes : solide en PHP dans le cadre WordPress, intermédiaire en Java depuis l'API Spring Boot de ShopWise, et limitée sur Node.js, que je n'utilise que ponctuellement.",
       importance:
         "C'est la deuxième compétence de mon profil et celle qui conditionne mon évolution. Un développeur front-end qui comprend le back-end conçoit de meilleures interfaces ; c'est aussi la compétence attendue pour tenir un rôle full stack, qui est mon objectif professionnel.",
       recul:
@@ -164,10 +177,10 @@ export const competences: Competence[] = [
       formations: [
         "Approfondissement de Django REST Framework pour la conception d'API",
         "Optimisation des requêtes et indexation, avec analyse de plans d'exécution",
-        "Sécurité applicative : mise à niveau sur le OWASP Top 10 et son application aux projets Django et WordPress",
+        "Sécurité applicative : durcissement de mes projets Django et WordPress — gestion des secrets, contrôle des permissions et mise à jour des dépendances",
       ],
     },
-    projets: ["gmao-django", "projet-wordpress"],
+    projets: ["gmao-django", "projet-wordpress", "shopwise"],
   },
   {
     slug: "bases-de-donnees",
@@ -175,7 +188,7 @@ export const competences: Competence[] = [
     domaine: "technique",
     categorie: "Données & persistance",
     icone: "FaDatabase",
-    niveau: 70,
+    niveau: 72,
     resume:
       "Modélisation relationnelle, conception de schémas cohérents et choix du système de persistance adapté au contexte d'usage.",
     technologies: ["MySQL", "PostgreSQL", "SQLite"],
@@ -190,9 +203,9 @@ export const competences: Competence[] = [
       {
         titre: "Choisir la persistance selon le contexte d'exécution",
         contexte:
-          "Mes trois projets présentaient des contraintes de persistance radicalement différentes : une plateforme web multi-utilisateurs, une application métier avec un domaine relationnel dense, et une application mobile devant fonctionner sur le terrain.",
+          "Trois de mes projets présentaient des contraintes de persistance radicalement différentes : une plateforme web multi-utilisateurs, une application métier avec un domaine relationnel dense, et une application mobile devant fonctionner sur le terrain.",
         action:
-          "Plutôt que de reconduire le même système par habitude, j'ai traité le choix comme une décision d'architecture. MySQL pour la plateforme WordPress, où il est l'option native de l'écosystème. PostgreSQL pour la GMAO, pour sa robustesse relationnelle sur un domaine à fortes contraintes d'intégrité. SQLite pour l'application Android, parce qu'un entrepôt ne garantit pas la connectivité et qu'une base embarquée supprime cette dépendance.",
+          "Plutôt que de reconduire le même système par habitude, j'ai traité le choix comme une décision d'architecture. MySQL pour la plateforme WordPress, où il est l'option native de l'écosystème. PostgreSQL pour la GMAO, retenu avec mon tuteur au moment du passage à Python et Django, pour sa robustesse relationnelle sur un domaine à fortes contraintes d'intégrité. SQLite pour l'application Android, parce qu'un entrepôt ne garantit pas la connectivité et qu'une base embarquée supprime cette dépendance.",
         resultat:
           "Chaque application dispose d'une persistance adaptée à ses conditions réelles d'exécution, sans dépendance superflue — l'application mobile en particulier reste pleinement fonctionnelle hors connexion.",
         valeurAjoutee:
@@ -229,7 +242,12 @@ export const competences: Competence[] = [
         "Conception de schémas conformes au RGPD : minimisation et durées de conservation",
       ],
     },
-    projets: ["gmao-django", "projet-wordpress", "gestion-stock-qrcode"],
+    projets: [
+      "gmao-django",
+      "projet-wordpress",
+      "gestion-stock-qrcode",
+      "shopwise",
+    ],
   },
   {
     slug: "developpement-mobile-android",
@@ -237,7 +255,7 @@ export const competences: Competence[] = [
     domaine: "technique",
     categorie: "Applications mobiles natives",
     icone: "SiAndroid",
-    niveau: 60,
+    niveau: 68,
     resume:
       "Développement d'applications Android natives en Java, avec persistance locale et intégration de capteurs matériels.",
     technologies: ["Java", "Android Studio", "SQLite"],
@@ -247,16 +265,16 @@ export const competences: Competence[] = [
       "J'ai développé une application Android native en Java, intégrant la caméra pour la lecture de codes et une base SQLite embarquée.",
     ],
     actualite:
-      "Le mobile natif garde un intérêt net partout où l'accès matériel et le fonctionnement hors ligne sont déterminants, alors même que les technologies multiplateformes progressent. La numérisation des opérations logistiques et industrielles — inventaire par scan, relevés d'intervention sur site — repose sur ce type d'application. L'obligation de facturation électronique pour les entreprises françaises, dont le déploiement s'échelonne à partir de 2026, accroît par ailleurs le besoin d'outils de traçabilité opérationnelle alimentés depuis le terrain.",
+      "Le mobile natif garde un intérêt net là où l'accès matériel et le fonctionnement hors ligne sont déterminants, alors même que les technologies multiplateformes progressent : ce qui départage les deux approches n'est plus la performance brute mais la profondeur d'accès aux capteurs et la tolérance à l'absence de réseau. La numérisation des opérations de terrain — inventaire par scan, relevés d'intervention sur site — repose précisément sur ces deux points, et c'est ce que l'application de stock a rendu tangible : une base SQLite embarquée supprimait toute dépendance à la connectivité de l'entrepôt. La question posée aujourd'hui à un développeur mobile est donc moins celle du framework que celle de ce qui doit continuer à fonctionner quand le réseau tombe.",
     anecdotes: [
       {
         titre: "Intégrer la lecture de QR Code au cœur d'un outil de stock",
         contexte:
           "L'application de gestion de stock devait permettre d'identifier un produit sans saisie manuelle. Il fallait à la fois générer un QR Code par produit et le relire de façon fiable, sur du matériel varié et dans des conditions d'éclairage non maîtrisées.",
         action:
-          "J'ai intégré la bibliothèque ZXing pour couvrir les deux sens — génération et lecture — plutôt que de développer une solution ad hoc. J'ai ensuite relié le scan directement à la fiche produit en base SQLite, afin que la lecture d'un code débouche immédiatement sur une action possible et non sur un simple affichage.",
+          "J'ai intégré la bibliothèque ZXing pour couvrir les deux sens — génération et lecture — plutôt que de développer une solution ad hoc. J'ai ensuite relié le scan à la fiche du produit en base SQLite, en m'accordant avec mon binôme, qui portait la gestion des produits, sur ce qu'un code devait contenir et sur l'écran auquel sa lecture renvoie.",
         resultat:
-          "L'identification d'un produit se fait par un scan unique, sans saisie de référence, et aboutit sur la fiche modifiable. La base SQLite garantit que l'application reste opérationnelle sans connexion réseau.",
+          "L'identification d'un produit se fait par un scan unique, sans saisie de référence, et aboutit sur la fiche du produit. La base SQLite garantit que l'application reste opérationnelle sans connexion réseau.",
         valeurAjoutee:
           "J'ai éliminé la saisie manuelle, qui est la principale source d'erreur et de lenteur dans un inventaire. Le choix d'une bibliothèque éprouvée plutôt que d'un développement spécifique m'a par ailleurs permis de concentrer mon temps sur la logique métier — un arbitrage entre réinvention et intégration que je considère comme structurant.",
         projetSlug: "gestion-stock-qrcode",
@@ -264,7 +282,7 @@ export const competences: Competence[] = [
     ],
     autocritique: {
       maitrise:
-        "Mon niveau est intermédiaire. Je conçois et livre une application Android native fonctionnelle, avec persistance locale et accès aux capteurs, mais je reste sur Java là où l'écosystème s'est déplacé vers Kotlin et Jetpack Compose. Je connais les fondamentaux du cycle de vie des activités sans avoir encore traité de cas complexes de restauration d'état.",
+        "Mon niveau est intermédiaire. Je conçois et livre une application Android native fonctionnelle, avec persistance locale et accès aux capteurs, mais je reste sur Java là où l'écosystème s'est déplacé vers Kotlin. Je connais les fondamentaux du cycle de vie des activités sans avoir encore traité de cas complexes de restauration d'état.",
       importance:
         "C'est une compétence secondaire dans mon profil, que j'assume comme telle. Elle ne constitue pas mon axe principal mais elle élargit utilement mon périmètre : elle me rend pertinent sur des projets où la donnée se saisit sur le terrain, et elle m'a apporté une compréhension des contraintes d'exécution que le web ne donne pas.",
       recul:
@@ -272,10 +290,10 @@ export const competences: Competence[] = [
     },
     evolution: {
       objectif:
-        "À moyen terme, je veux passer à Kotlin et Jetpack Compose pour développer selon les standards actuels de la plateforme, et savoir gérer proprement la synchronisation entre une base locale et un serveur distant.",
+        "À moyen terme, je veux passer de Java à Kotlin pour développer selon le standard actuel de la plateforme, et savoir gérer proprement la synchronisation entre une base locale et un serveur distant.",
       formations: [
-        "Kotlin et Jetpack Compose pour le développement Android moderne",
-        "Architecture MVVM et composants Android Jetpack",
+        "Applications web progressives : la version mobile de la GMAO, en cours de finition, qui me fait confronter l'approche PWA au natif sur un même besoin de terrain",
+        "Kotlin : passer de Java au langage aujourd'hui standard sur Android",
         "Stratégies de synchronisation hors ligne et résolution de conflits",
       ],
     },
@@ -290,14 +308,21 @@ export const competences: Competence[] = [
     niveau: 65,
     resume:
       "Maîtrise des outils qui rendent un projet reproductible et collaboratif : Git, Docker, environnements Linux.",
-    technologies: ["Git", "Docker", "Linux", "VS Code", "Android Studio"],
+    technologies: [
+      "Git",
+      "Docker",
+      "GitHub Actions",
+      "Linux",
+      "VS Code",
+      "Android Studio",
+    ],
     definition: [
       "L'outillage et l'industrialisation regroupent les pratiques qui permettent à un projet d'être versionné, reproduit à l'identique sur un autre poste et repris par quelqu'un d'autre : contrôle de version, conteneurisation, gestion des environnements, automatisation des tâches répétitives.",
       "C'est la compétence la moins visible dans un livrable et la plus déterminante dans un travail d'équipe. Un projet qui ne s'installe pas ailleurs que sur la machine de son auteur n'est pas un projet livrable, quelle que soit la qualité de son code. En contexte professionnel, cette compétence conditionne directement la capacité d'une équipe à intégrer un nouvel arrivant, à reproduire un incident et à livrer sans surprise.",
-      "J'utilise Git au quotidien pour l'ensemble de mes projets, je travaille en environnement Linux et j'emploie Docker pour isoler mes environnements de développement.",
+      "J'utilise Git au quotidien pour l'ensemble de mes projets, je travaille en environnement Linux, j'emploie Docker pour isoler mes environnements et j'ai automatisé la construction, les tests et la publication d'images avec GitHub Actions sur l'étude de cas ShopWise.",
     ],
     actualite:
-      "La sécurisation de la chaîne d'approvisionnement logicielle est devenue un enjeu central après une série de compromissions par les dépendances. Le Cyber Resilience Act européen introduit des obligations de traçabilité des composants — notamment la production d'une nomenclature logicielle — qui reposent directement sur cet outillage. Savoir versionner et reproduire un environnement n'est plus seulement du confort d'équipe : c'est ce qui rend une chaîne de production auditable.",
+      "L'intégration continue est passée du statut d'outil d'équipes matures à celui d'attendu par défaut : un dépôt qui ne se construit pas, ne se teste pas et ne s'installe pas seul est aujourd'hui tenu pour incomplet, quelle que soit la qualité de son code. La conteneurisation a achevé ce déplacement en rendant l'environnement lui-même versionnable, au même titre que les sources. C'est ce que l'étude de cas ShopWise m'a fait éprouver directement : le livrable attendu n'était pas l'application mais la chaîne qui la produit — pipeline GitHub Actions, images Docker et démarrage en une seule commande.",
     anecdotes: [
       {
         titre: "Versionner pour pouvoir se tromper sans risque",
@@ -309,11 +334,12 @@ export const competences: Competence[] = [
           "J'ai pu conduire ces refontes en explorant des pistes, en revenant en arrière lorsqu'elles ne tenaient pas, sans jamais perdre d'état fonctionnel intermédiaire.",
         valeurAjoutee:
           "Un versionnement discipliné ne sert pas seulement à archiver : il abaisse le coût de l'erreur et rend donc possibles des remises en question qu'on n'oserait pas autrement. C'est ce qui m'a permis d'accepter de restructurer plutôt que de contourner.",
+        projetSlug: "gmao-django",
       },
     ],
     autocritique: {
       maitrise:
-        "Je suis pleinement autonome sur Git en usage individuel — branches, historique, retours en arrière — et à l'aise en environnement Linux. Ma maîtrise de Docker est fonctionnelle mais reste au niveau de l'usage : je sais conteneuriser un environnement de développement, je n'ai pas conçu de chaîne d'intégration continue complète.",
+        "Je suis pleinement autonome sur Git en usage individuel — branches, historique, retours en arrière — et à l'aise en environnement Linux. Sur ShopWise, j'ai conçu une chaîne complète : pipeline GitHub Actions en trois travaux, Dockerfiles multi-étapes et orchestration Docker Compose. Ce que je n'ai pas encore fait, c'est exploiter une telle chaîne dans la durée sur un dépôt partagé à plusieurs, ni la prolonger jusqu'au déploiement.",
       importance:
         "C'est une compétence support, mais dont l'absence est éliminatoire en équipe. Je la considère comme un prérequis de mon métier plutôt que comme un axe de différenciation.",
       recul:
@@ -321,14 +347,19 @@ export const competences: Competence[] = [
     },
     evolution: {
       objectif:
-        "À moyen terme, je veux savoir mettre en place une chaîne d'intégration et de déploiement continus complète — tests automatisés, build, déploiement — et travailler couramment selon un flux de branches et de revues de code en équipe.",
+        "À moyen terme, je veux prolonger l'intégration continue jusqu'au déploiement continu vers un environnement réel — ce que la chaîne de ShopWise s'arrête juste avant de faire, puisqu'elle publie les images sans les déployer — et travailler couramment selon un flux de branches et de revues de code en équipe.",
       formations: [
-        "Intégration et déploiement continus avec GitHub Actions",
+        "Déploiement continu : livrer automatiquement vers un environnement réel après les tests",
         "Docker Compose et orchestration d'environnements multi-services",
         "Flux de travail Git collaboratifs et pratiques de revue de code",
       ],
     },
-    projets: ["gmao-django", "projet-wordpress", "gestion-stock-qrcode"],
+    projets: [
+      "gmao-django",
+      "projet-wordpress",
+      "gestion-stock-qrcode",
+      "shopwise",
+    ],
   },
   {
     slug: "resolution-de-problemes",
@@ -336,7 +367,7 @@ export const competences: Competence[] = [
     domaine: "humaine",
     categorie: "Analyse & méthode",
     icone: "FaLightbulb",
-    niveau: 85,
+    niveau: 82,
     resume:
       "Décomposer une situation complexe, isoler la cause réelle et choisir une solution proportionnée au problème.",
     definition: [
@@ -350,11 +381,11 @@ export const competences: Competence[] = [
       {
         titre: "Traiter la complexité d'un domaine par la modélisation plutôt que par le code",
         contexte:
-          "Sur la GMAO, la difficulté initiale se présentait comme un problème de développement : beaucoup de fonctionnalités à produire dans un temps contraint. En analysant, j'ai compris que le vrai problème était ailleurs — la densité des relations entre équipements, interventions, techniciens et pièces détachées rendait toute implémentation prématurée coûteuse à défaire.",
+          "Sur la GMAO, la difficulté initiale se présentait comme un problème de développement : beaucoup de fonctionnalités à produire dans un temps contraint, sur une application déjà engagée par quelqu'un d'autre. En analysant, j'ai compris que le problème était en amont — je ne connaissais pas le métier, et la densité des relations entre équipements, interventions, techniciens et pièces détachées rendait toute implémentation prématurée coûteuse à défaire.",
         action:
-          "J'ai résisté à l'impulsion de produire des écrans pour montrer une avancée visible, et j'ai consacré la première phase à modéliser le domaine. J'ai décomposé le besoin en entités, vérifié chaque relation contre un cas d'usage concret, puis seulement construit les vues au-dessus d'un modèle stabilisé.",
+          "J'ai résisté à l'impulsion de produire des écrans pour montrer une avancée visible. Ma première phase a été d'interroger les personnes concernées — responsables d'entité, techniciens, commerciaux — pour m'approprier leur vocabulaire et identifier ce qui était réellement attendu. La modélisation est venue ensuite : décomposer le besoin en entités, vérifier chaque relation contre un cas d'usage concret, et ne construire les vues qu'au-dessus.",
         resultat:
-          "Le modèle de données n'a pas eu à être restructuré en cours de projet, alors que c'est précisément ce qui aurait consommé le temps que je pensais gagner en commençant par l'interface.",
+          "Le socle métier s'est affiné au fil des fonctionnalités ajoutées sans jamais devoir être restructuré, alors qu'une reprise de fond en comble aurait coûté bien plus que le temps que je pensais gagner en commençant par l'interface.",
         valeurAjoutee:
           "J'ai reformulé un problème de vitesse en problème de conception. Identifier qu'on ne traite pas le bon problème est la partie la plus rentable de la résolution, et la plus facile à sauter sous pression.",
         projetSlug: "gmao-django",
@@ -364,9 +395,9 @@ export const competences: Competence[] = [
         contexte:
           "L'application de gestion de stock nécessitait la génération et la lecture de QR Codes. J'aurais pu développer cette brique moi-même : c'était techniquement formateur, mais cela consommait l'essentiel du temps disponible pour une fonction qui n'était pas le cœur de valeur du projet.",
         action:
-          "J'ai posé la question en termes de proportion : ce qui fait la valeur de cette application, c'est la gestion de stock, pas l'algorithme de décodage. J'ai donc intégré la bibliothèque ZXing, éprouvée et maintenue, et réinvesti le temps dégagé dans la logique métier et l'ergonomie de terrain.",
+          "J'ai posé la question en termes de proportion : ce qui fait la valeur de cette application, c'est la gestion de stock, pas l'algorithme de décodage. J'ai donc intégré la bibliothèque ZXing, éprouvée et maintenue, et réinvesti le temps dégagé dans la fiabilité du scan et sa place dans le parcours de l'utilisateur.",
         resultat:
-          "La fonction de scan est fiable dès la première version, et la partie réellement différenciante du projet — la gestion de l'inventaire et son interface — a bénéficié du temps qui aurait été consommé ailleurs.",
+          "La fonction de scan est fiable dès la première version, et le temps qui serait parti dans la réécriture d'un décodeur est allé au reste de l'application.",
         valeurAjoutee:
           "J'ai arbitré entre ce qu'il fallait maîtriser et ce qu'il fallait intégrer. Savoir où ne pas dépenser son effort est une compétence de résolution de problèmes à part entière, souvent moins spontanée chez un développeur en formation que la volonté de tout construire soi-même.",
         projetSlug: "gestion-stock-qrcode",
@@ -391,7 +422,12 @@ export const competences: Competence[] = [
         "Pratique du débogage outillé plutôt qu'exploratoire",
       ],
     },
-    projets: ["gmao-django", "gestion-stock-qrcode", "projet-wordpress"],
+    projets: [
+      "gmao-django",
+      "gestion-stock-qrcode",
+      "projet-wordpress",
+      "shopwise",
+    ],
   },
   {
     slug: "organisation",
@@ -399,7 +435,7 @@ export const competences: Competence[] = [
     domaine: "humaine",
     categorie: "Planification & priorisation",
     icone: "FaTasks",
-    niveau: 80,
+    niveau: 75,
     resume:
       "Découper un projet en étapes tenables, hiérarchiser ce qui compte et livrer dans les délais annoncés.",
     definition: [
@@ -411,13 +447,14 @@ export const competences: Competence[] = [
       "La généralisation du travail hybride a renforcé l'exigence d'autonomie organisationnelle : dans des équipes moins synchrones, la capacité à structurer soi-même son travail et à rendre son avancement visible sans supervision directe est devenue un attendu explicite, y compris pour des profils juniors.",
     anecdotes: [
       {
-        titre: "Conduire trois projets techniques distincts en parallèle de la formation",
+        titre:
+          "Conduire quatre projets techniques distincts au fil de la formation",
         contexte:
-          "J'ai mené sur la même période trois projets reposant sur des écosystèmes sans recouvrement : un plugin WordPress en PHP, une application Android en Java et une application web Django en Python. Chaque changement de projet impliquait un changement complet de contexte technique.",
+          "J'ai mené quatre projets reposant sur des écosystèmes sans recouvrement, deux par deux sur une même période : le plugin WordPress en PHP et l'application Android en Java pendant la licence professionnelle, puis la GMAO en Python et l'étude de cas ShopWise en Java et TypeScript pendant l'alternance. Chaque changement de projet impliquait un changement complet de contexte technique.",
         action:
           "Plutôt que d'alterner en permanence, j'ai traité chaque projet par blocs de travail suffisamment longs pour amortir le coût du changement de contexte. À l'intérieur de chacun, j'ai appliqué le même ordre : d'abord le modèle de données, puis la logique métier, puis l'interface — en identifiant les dépendances avant de commencer plutôt qu'en les découvrant en route.",
         resultat:
-          "Les trois projets ont été menés à un état fonctionnel et documenté, chacun avec sa base de données conçue en amont et son architecture propre à son écosystème.",
+          "Les quatre projets ont été menés à un état fonctionnel et documenté, chacun avec son architecture propre à son écosystème.",
         valeurAjoutee:
           "J'ai reconnu que le coût réel n'était pas le volume de travail mais la fragmentation, et j'ai organisé mon temps en conséquence. Structurer par dépendances plutôt que par urgence perçue est ce qui m'a permis de ne pas avoir à revenir en arrière.",
         projetSlug: "gmao-django",
@@ -440,7 +477,12 @@ export const competences: Competence[] = [
         "Outils de suivi de projet collaboratifs",
       ],
     },
-    projets: ["gmao-django", "projet-wordpress", "gestion-stock-qrcode"],
+    projets: [
+      "gmao-django",
+      "projet-wordpress",
+      "gestion-stock-qrcode",
+      "shopwise",
+    ],
   },
   {
     slug: "adaptabilite",
@@ -454,19 +496,19 @@ export const competences: Competence[] = [
     definition: [
       "L'adaptabilité est la capacité à atteindre rapidement un niveau opérationnel dans un environnement technique ou organisationnel qu'on ne connaît pas. Elle ne se réduit pas à la curiosité : elle suppose une méthode d'apprentissage, et surtout la capacité à reconnaître ce qui, dans un contexte nouveau, relève de principes déjà connus.",
       "C'est probablement la compétence la plus déterminante d'une carrière en ingénierie logicielle, parce que la durée de vie utile d'une technologie est plus courte que celle d'une carrière. Un professionnel qui n'aurait maîtrisé qu'une pile technique serait obsolète en une décennie. En contexte professionnel, l'adaptabilité est ce que recherchent réellement les recruteurs derrière la liste de technologies d'une offre : la capacité à absorber celle qui n'y figure pas encore.",
-      "Je l'ai éprouvée en passant successivement par des écosystèmes sans recouvrement — PHP, Java, Python — sur une même période.",
+      "Je l'ai éprouvée en passant successivement par des écosystèmes sans recouvrement — PHP, Java, Python, TypeScript — au fil de ma formation et de mon alternance.",
     ],
     actualite:
       "L'accélération du cycle des outils, amplifiée par l'irruption des assistants de développement dans les pratiques quotidiennes, a raccourci la durée de pertinence d'un savoir technique donné. Les référentiels de compétences du secteur mettent désormais l'apprenance au même rang que la maîtrise technique : ce qui est valorisé n'est plus le stock de connaissances mais la vitesse à laquelle il se renouvelle.",
     anecdotes: [
       {
-        titre: "Trois écosystèmes sans recouvrement sur une même période",
+        titre: "Quatre écosystèmes sans recouvrement en quatre ans",
         contexte:
-          "Mes trois projets m'ont conduit à travailler successivement en PHP dans l'écosystème WordPress, en Java sur Android, et en Python avec Django. Ces environnements ne partagent ni langage, ni outillage, ni conventions d'architecture.",
+          "Mes projets m'ont conduit à travailler successivement en PHP dans l'écosystème WordPress, en Java sur Android, en Python avec Django, puis en Java avec Spring Boot et en TypeScript avec Angular. Ces environnements ne partagent ni langage, ni outillage, ni conventions d'architecture.",
         action:
-          "Plutôt que d'aborder chacun comme un apprentissage indépendant, j'ai cherché systématiquement les invariants : la logique CRUD que j'avais structurée en classes dans le plugin WordPress m'a préparé aux modèles Django ; le travail de modélisation relationnelle mené sur MySQL s'est transposé à SQLite puis à PostgreSQL ; la séparation des responsabilités que j'avais appliquée en PHP a trouvé son équivalent dans l'architecture MVT.",
+          "Plutôt que d'aborder chacun comme un apprentissage indépendant, j'ai cherché systématiquement les invariants : la logique CRUD que j'avais structurée en classes dans le plugin WordPress m'a préparé aux modèles Django ; le travail de modélisation relationnelle mené sur MySQL s'est transposé à SQLite puis à PostgreSQL ; la séparation des responsabilités que j'avais appliquée en PHP a trouvé son équivalent dans l'architecture MVT de Django, puis dans le découpage en couches de Spring Boot.",
         resultat:
-          "Chaque nouvel écosystème a demandé moins de temps d'appropriation que le précédent, et les trois projets ont abouti à un état fonctionnel malgré des piles techniques entièrement distinctes.",
+          "Chaque nouvel écosystème a demandé moins de temps d'appropriation que le précédent, et les quatre projets ont abouti à un état fonctionnel malgré des piles techniques entièrement distinctes.",
         valeurAjoutee:
           "J'ai appris à transférer des principes plutôt qu'à accumuler des syntaxes. C'est ce qui rend un apprentissage cumulatif au lieu d'être répétitif, et ce qui me permet d'annoncer honnêtement que je peux être opérationnel sur une technologie que je ne connais pas encore.",
         projetSlug: "projet-wordpress",
@@ -491,7 +533,12 @@ export const competences: Competence[] = [
         "Contribution à des projets open source pour confronter mes pratiques à celles d'autres développeurs",
       ],
     },
-    projets: ["projet-wordpress", "gestion-stock-qrcode", "gmao-django"],
+    projets: [
+      "projet-wordpress",
+      "gestion-stock-qrcode",
+      "gmao-django",
+      "shopwise",
+    ],
   },
   {
     slug: "travail-en-equipe",
@@ -499,7 +546,7 @@ export const competences: Competence[] = [
     domaine: "humaine",
     categorie: "Collaboration",
     icone: "FaUsers",
-    niveau: 75,
+    niveau: 78,
     resume:
       "Produire un travail qui s'intègre à celui des autres et reste reprenable par quelqu'un d'autre que soi.",
     definition: [
@@ -540,7 +587,7 @@ export const competences: Competence[] = [
         "Contribution à des projets open source pour confronter ma pratique à des standards collectifs",
       ],
     },
-    projets: ["projet-wordpress", "gmao-django"],
+    projets: ["gestion-stock-qrcode", "gmao-django"],
   },
   {
     slug: "communication",
@@ -548,7 +595,7 @@ export const competences: Competence[] = [
     domaine: "humaine",
     categorie: "Transmission & vulgarisation",
     icone: "FaComments",
-    niveau: 75,
+    niveau: 62,
     resume:
       "Expliquer un travail technique à des interlocuteurs qui ne le sont pas, à l'oral comme à l'écrit.",
     definition: [
@@ -593,11 +640,23 @@ export const competences: Competence[] = [
   },
 ];
 
-export const competencesTechniques = competences.filter(
+/**
+ * Toutes les compétences, de la plus maîtrisée à la plus perfectible.
+ *
+ * C'est l'ordre de référence du portfolio : le schéma synthétique, les cartes,
+ * les sous-menus et l'aperçu de la page d'accueil s'appuient tous dessus, pour
+ * qu'un même classement se lise partout. Les niveaux sont strictement
+ * décroissants, le tri suffit donc à porter la hiérarchie voulue.
+ */
+export const competencesClassees = [...competences].sort(
+  (a, b) => b.niveau - a.niveau
+);
+
+export const competencesTechniques = competencesClassees.filter(
   (competence) => competence.domaine === "technique"
 );
 
-export const competencesHumaines = competences.filter(
+export const competencesHumaines = competencesClassees.filter(
   (competence) => competence.domaine === "humaine"
 );
 

@@ -1,0 +1,63 @@
+<svg width="600" height="400" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Interface de ShopWise : clients, rendez-vous et fidélisation">
+  <defs>
+    <linearGradient id="fond" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f5f3ff"/>
+      <stop offset="100%" stop-color="#ede9fe"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#6d28d9"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="400" fill="url(#fond)"/>
+
+  <!-- Fenêtre applicative -->
+  <rect x="48" y="44" width="504" height="312" rx="14" fill="#ffffff"/>
+  <rect x="48" y="44" width="504" height="34" rx="14" fill="#111827" opacity="0.04"/>
+  <rect x="48" y="66" width="504" height="12" fill="#111827" opacity="0.04"/>
+  <circle cx="70" cy="61" r="5" fill="#ddd6fe"/>
+  <circle cx="88" cy="61" r="5" fill="#ddd6fe"/>
+  <circle cx="106" cy="61" r="5" fill="#ddd6fe"/>
+  <rect x="128" y="54" width="140" height="14" rx="7" fill="#f3f4f6"/>
+
+  <!-- Barre latérale -->
+  <rect x="48" y="78" width="132" height="278" fill="url(#accent)" opacity="0.94"/>
+  <text x="70" y="112" font-family="Poppins, Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff">ShopWise</text>
+  <rect x="64" y="132" width="100" height="26" rx="8" fill="#ffffff" opacity="0.22"/>
+  <text x="76" y="150" font-family="Inter, Arial, sans-serif" font-size="12" fill="#ffffff">Clients</text>
+  <text x="76" y="184" font-family="Inter, Arial, sans-serif" font-size="12" fill="#ffffff" opacity="0.75">Rendez-vous</text>
+  <text x="76" y="214" font-family="Inter, Arial, sans-serif" font-size="12" fill="#ffffff" opacity="0.75">Fidélisation</text>
+  <rect x="64" y="286" width="100" height="1" fill="#ffffff" opacity="0.25"/>
+  <text x="64" y="312" font-family="Inter, Arial, sans-serif" font-size="10" fill="#ffffff" opacity="0.7">Spring Boot · Angular</text>
+  <text x="64" y="330" font-family="Inter, Arial, sans-serif" font-size="10" fill="#ffffff" opacity="0.7">PostgreSQL · Docker</text>
+
+  <!-- Contenu : liste des rendez-vous -->
+  <text x="204" y="112" font-family="Poppins, Arial, sans-serif" font-size="14" font-weight="600" fill="#111827">Rendez-vous du jour</text>
+  <rect x="204" y="124" width="86" height="20" rx="10" fill="#f5f3ff"/>
+  <text x="216" y="138" font-family="Inter, Arial, sans-serif" font-size="10" fill="#6d28d9">Statut : tous</text>
+  <rect x="298" y="124" width="72" height="20" rx="10" fill="#f5f3ff"/>
+  <text x="310" y="138" font-family="Inter, Arial, sans-serif" font-size="10" fill="#6d28d9">Aujourd'hui</text>
+
+  <g font-family="Inter, Arial, sans-serif" font-size="11">
+    <rect x="204" y="158" width="320" height="36" rx="8" fill="#f9fafb"/>
+    <text x="218" y="180" fill="#111827">09:30 — Coupe</text>
+    <rect x="430" y="167" width="62" height="18" rx="9" fill="#dcfce7"/>
+    <text x="440" y="180" font-size="9" fill="#166534">Honoré</text>
+
+    <rect x="204" y="202" width="320" height="36" rx="8" fill="#f9fafb"/>
+    <text x="218" y="224" fill="#111827">11:00 — Soin</text>
+    <rect x="430" y="211" width="62" height="18" rx="9" fill="#ede9fe"/>
+    <text x="437" y="224" font-size="9" fill="#5b21b6">Planifié</text>
+
+    <rect x="204" y="246" width="320" height="36" rx="8" fill="#f9fafb"/>
+    <text x="218" y="268" fill="#111827">14:15 — Couleur</text>
+    <rect x="430" y="255" width="62" height="18" rx="9" fill="#fee2e2"/>
+    <text x="440" y="268" font-size="9" fill="#991b1b">Annulé</text>
+  </g>
+
+  <!-- Encart fidélité -->
+  <rect x="204" y="296" width="320" height="42" rx="8" fill="#f5f3ff"/>
+  <text x="218" y="313" font-family="Inter, Arial, sans-serif" font-size="10" fill="#6b7280">Points de fidélité attribués automatiquement</text>
+  <text x="218" y="330" font-family="Poppins, Arial, sans-serif" font-size="13" font-weight="700" fill="#6d28d9">+10 pts — rendez-vous honoré</text>
+</svg>

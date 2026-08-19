@@ -33,9 +33,9 @@ export const presentation: Presentation = {
   titreAccroche: "Présentation générale",
 
   accroche: [
-    "Un projet confortable s'exécute sans surprise ; **l'intérêt commence là où le projet résiste**. Une contrainte inhabituelle, un domaine métier inconnu, un problème sans solution évidente : **ce sont ces projets-là qui donnent envie de s'y mettre**, bien plus que ceux dont on connaît déjà l'issue avant de commencer.",
-    "Aucun de mes projets n'a commencé avec toutes les connaissances nécessaires. À chaque fois, il a fallu apprendre en cours de route : un langage nouveau, un environnement inconnu, une notion à découvrir. **C'est l'une des parties les plus intéressantes de ce métier : on n'y a jamais fini d'apprendre.**",
-    "Une autre chose rend ce métier passionnant : **la flexibilité dans la manière de résoudre un problème**. Les technologies disponibles sont si nombreuses qu'un même besoin admet toujours plusieurs solutions valables. **L'enjeu n'est donc pas de trouver une solution, mais de choisir la bonne**, celle qui tient compte du contexte, du temps disponible et de ceux qui reprendront le projet ensuite.",
+    "Un projet confortable s'exécute sans surprise ; l'intérêt commence là où le projet résiste. Une contrainte inhabituelle, un domaine métier inconnu, un problème sans solution évidente : ce sont ces projets-là qui donnent envie de s'y mettre, bien plus que ceux dont on connaît déjà l'issue avant de commencer.",
+    "Aucun de mes projets n'a commencé avec toutes les connaissances nécessaires. À chaque fois, il a fallu apprendre en cours de route : un langage nouveau, un environnement inconnu, une notion à découvrir. C'est l'une des parties les plus intéressantes de ce métier : on n'y a jamais fini d'apprendre.",
+    "Une autre chose rend ce métier passionnant : la flexibilité dans la manière de résoudre un problème. Les technologies disponibles sont si nombreuses qu'un même besoin admet toujours plusieurs solutions valables. L'enjeu n'est donc pas de trouver une solution, mais de choisir la bonne, celle qui tient compte du contexte, du temps disponible et de ceux qui reprendront le projet ensuite."
   ],
 
   valeurs: [
@@ -52,7 +52,7 @@ export const presentation: Presentation = {
     {
       titre: "L'autonomie",
       texte:
-        "L'autonomie n'est pas l'idée de s'isoler, c'est **la capacité à pouvoir résoudre un blocage par soi-même**. Chercher par soi-même, puis isoler un problème pour poser une question précise plutôt qu'une question vague. Mes trois projets ont été menés de bout en bout, du modèle de données jusqu'à la livraison. **Cette autonomie est faite pour servir un collectif** qui permet d'arriver dans une équipe sans en ralentir le rythme.",
+        "L'autonomie n'est pas l'idée de s'isoler, c'est **la capacité à pouvoir résoudre un blocage par soi-même**. Chercher par soi-même, puis isoler un problème pour poser une question précise plutôt qu'une question vague. Mes projets ont été menés de bout en bout, du modèle de données jusqu'à la livraison. **Cette autonomie est faite pour servir un collectif** qui permet d'arriver dans une équipe sans en ralentir le rythme.",
     },
     {
       titre: "La curiosité",
@@ -68,7 +68,7 @@ export const presentation: Presentation = {
 
   projet: {
     intro:
-      "Mon projet professionnel est de devenir **développeur full stack** : intervenir sur toute la chaîne, du modèle de données jusqu'à l'interface, plutôt que sur un seul maillon. Mes trois projets me l'ont confirmé, ce qui m'intéresse se situe à la jonction du besoin et de sa traduction technique. Je veux exercer ce métier sur **des projets variés et des technologies actuelles**, chacun posant un problème qui lui est propre.",
+      "Mon projet professionnel est de devenir **développeur full stack** : intervenir sur toute la chaîne, du modèle de données jusqu'à l'interface, plutôt que sur un seul maillon. Chacun de mes projets me l'a confirmé : ce qui m'intéresse se situe à la jonction du besoin et de sa traduction technique. Je veux exercer ce métier sur **des projets variés et des technologies actuelles**, chacun posant un problème qui lui est propre.",
     courtTerme:
       "**Valider mon Mastère Expert en Ingénierie du Logiciel**, que je prépare en alternance, et continuer à faire évoluer la GMAO qui m'est confiée. **Travailler sur une application utilisée en conditions réelles** m'apporte ce qu'aucun projet d'école ne peut simuler : des utilisateurs, un existant à reprendre et des contraintes de production.",
     professionnel:
@@ -108,25 +108,25 @@ export const presentation: Presentation = {
     {
       titre: "Les jeux vidéo",
       texte:
-        "Ce qui me retient dans un jeu est souvent sa mécanique : comprendre pourquoi un système de règles fonctionne, où il tient son équilibre et où il finit par casser. C'est le même réflexe que devant une application, où l'on cherche aussi ce qui rend un ensemble cohérent.",
+        "Ce qui me retient dans un jeu est souvent sa mécanique : comprendre pourquoi un système de règles fonctionne, où il tient son équilibre et où il finit par casser. **C'est le même réflexe que devant une application**, où l'on cherche aussi ce qui rend un ensemble cohérent.",
       icone: "FaGamepad",
     },
     {
       titre: "L'électronique",
       texte:
-        "C'est le domaine que je connais le moins et celui que je veux explorer. Construire mon propre flipper m'obligera à sortir du logiciel pour toucher au matériel. Comprendre ce qui se passe sous la couche que je manipule d'habitude m'intéresse autant que le résultat final.",
+        "C'est **le domaine que je connais le moins et celui que je veux explorer**. Construire mon propre flipper m'obligera à sortir du logiciel pour toucher au matériel. Comprendre ce qui se passe sous la couche que je manipule d'habitude m'intéresse autant que le résultat final.",
       icone: "FaMicrochip",
     },
     {
       titre: "Les nouvelles technologies",
       texte:
-        "Suivre ce qui sort ne sert pas à tout adopter, mais à savoir ce qui existe le jour où un projet en a besoin. Je m'y intéresse en curieux plutôt qu'en spécialiste : lire, essayer sur un petit projet, et retenir dans quel cas l'outil serait pertinent.",
+        "Suivre ce qui sort ne sert pas à tout adopter, mais à **savoir ce qui existe le jour où un projet en a besoin**. Je m'y intéresse en curieux plutôt qu'en spécialiste : lire, essayer sur un petit projet, et retenir dans quel cas l'outil serait pertinent.",
       icone: "FaLaptopCode",
     },
     {
       titre: "Le Japon",
       texte:
-        "C'est le voyage que je veux faire. Ce qui m'attire est autant la culture que le rapport particulier du pays à la technique, où l'artisanat traditionnel et l'industrie de pointe cohabitent sans se contredire. Découvrir un endroit dont on ne partage ni la langue ni les codes est un dépaysement que je recherche.",
+        "C'est le voyage que je veux faire. Ce qui m'attire est autant la culture que le rapport particulier du pays à la technique, où **l'artisanat traditionnel et l'industrie de pointe cohabitent sans se contredire**. Découvrir un endroit dont on ne partage ni la langue ni les codes est un dépaysement que je recherche.",
       icone: "GiJapan",
     },
   ],

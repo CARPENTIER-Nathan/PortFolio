@@ -26,7 +26,7 @@ export default function ProjetsPage() {
           </div>
         </SectionAnimee>
 
-        <div className="grille">
+        <div className="grilleCentree">
           {projets.map((projet, index) => (
             <CarteProjets key={projet.slug} projet={projet} index={index} />
           ))}

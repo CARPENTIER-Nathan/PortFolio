@@ -93,3 +93,92 @@
   flex-wrap: wrap;
   gap: 0.75rem;
 }
+
+.blocs {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.sousTitre {
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.etiquetteBloc {
+  font-weight: 600;
+  color: var(--gris-900);
+}
+
+/* Compétences rattachées — navigation circulaire */
+.sectionLiee {
+  margin-top: 3.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--gris-200);
+}
+
+.grilleCompetences {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .grilleCompetences {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.carteCompetence {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--gris-200);
+  border-radius: var(--rayon-l);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.carteCompetence:hover {
+  border-color: var(--violet-clair);
+  box-shadow: var(--ombre-m);
+}
+
+.pastilleCompetence {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--rayon-m);
+  background: var(--gris-100);
+  color: var(--violet);
+}
+
+.nomCompetence {
+  font-size: 0.875rem;
+  font-weight: 700;
+  transition: color 0.2s ease;
+}
+
+.carteCompetence:hover .nomCompetence {
+  color: var(--violet);
+}
+
+.resumeCompetence {
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  color: var(--gris-500);
+}
+
+.inviteCompetence {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--violet);
+}

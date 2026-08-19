@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 import SectionAnimee from "@/components/SectionAnimee";
+import SchemaCompetences from "@/components/SchemaCompetences";
 import IconeCompetence from "@/components/IconeCompetence";
 import {
   competencesTechniques,
@@ -97,6 +98,10 @@ export default function CompetencesPage() {
               et mon évolution.
             </p>
           </div>
+        </SectionAnimee>
+
+        <SectionAnimee>
+          <SchemaCompetences />
         </SectionAnimee>
 
         {groupes.map((groupe) => (

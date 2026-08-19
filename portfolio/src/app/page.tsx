@@ -5,7 +5,7 @@ import SectionAnimee from "@/components/SectionAnimee";
 import CarteProjets from "@/components/CarteProjets";
 import PuceCompetence from "@/components/PuceCompetence";
 import { projets } from "@/data/projets";
-import { competences } from "@/data/competences";
+import { competencesClassees } from "@/data/competences";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -22,14 +22,14 @@ export default function Home() {
                 Mes <span className="accent">Projets</span>
               </h2>
               <p className={styles.introSection}>
-                Découvrez une sélection de mes réalisations les plus
-                significatives
+                Mes réalisations, de la plus récente à la plus ancienne,
+                chacune détaillée dans une étude complète
               </p>
             </div>
           </SectionAnimee>
 
-          <div className="grille">
-            {projets.slice(0, 3).map((projet, index) => (
+          <div className="grilleCentree">
+            {projets.map((projet, index) => (
               <CarteProjets key={projet.slug} projet={projet} index={index} />
             ))}
           </div>
@@ -59,7 +59,7 @@ export default function Home() {
 
           <SectionAnimee>
             <div className={styles.puces}>
-              {competences.map((competence) => (
+              {competencesClassees.map((competence) => (
                 <PuceCompetence key={competence.slug} competence={competence} />
               ))}
             </div>

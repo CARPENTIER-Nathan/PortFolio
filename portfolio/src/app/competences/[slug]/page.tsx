@@ -116,10 +116,6 @@ export default async function PageCompetence({ params }: PageProps) {
             <SectionAnimee delai={0.05}>
               <section className={styles.section}>
                 <h2 className={styles.titreSection}>Mes éléments de preuve</h2>
-                <p className={styles.introSection}>
-                  Des situations concrètes où j&apos;ai mis cette compétence en
-                  œuvre, et ce qu&apos;elles ont produit.
-                </p>
 
                 <div className={styles.anecdotes}>
                   {competence.anecdotes.map((anecdote, i) => {
@@ -134,30 +130,34 @@ export default async function PageCompetence({ params }: PageProps) {
                         </h3>
 
                         <div className={styles.corpsAnecdote}>
-                          <p className={styles.paragraphe}>
-                            <strong className={styles.etiquetteBloc}>
-                              Le contexte.
-                            </strong>{" "}
-                            {anecdote.contexte}
-                          </p>
-                          <p className={styles.paragraphe}>
-                            <strong className={styles.etiquetteBloc}>
-                              Ce que j&apos;ai fait.
-                            </strong>{" "}
-                            {anecdote.action}
-                          </p>
-                          <p className={styles.paragraphe}>
-                            <strong className={styles.etiquetteBloc}>
-                              Le résultat.
-                            </strong>{" "}
-                            {anecdote.resultat}
-                          </p>
-                          <p className={styles.paragraphe}>
-                            <strong className={styles.etiquetteBloc}>
-                              Ma valeur ajoutée.
-                            </strong>{" "}
-                            {anecdote.valeurAjoutee}
-                          </p>
+                          <div>
+                            <h4 className={styles.intituleBloc}>Le contexte</h4>
+                            <p className={styles.paragraphe}>
+                              {anecdote.contexte}
+                            </p>
+                          </div>
+                          <div>
+                            <h4 className={styles.intituleBloc}>
+                              Ce que j&apos;ai fait
+                            </h4>
+                            <p className={styles.paragraphe}>
+                              {anecdote.action}
+                            </p>
+                          </div>
+                          <div>
+                            <h4 className={styles.intituleBloc}>Le résultat</h4>
+                            <p className={styles.paragraphe}>
+                              {anecdote.resultat}
+                            </p>
+                          </div>
+                          <div>
+                            <h4 className={styles.intituleBloc}>
+                              Ma valeur ajoutée
+                            </h4>
+                            <p className={styles.paragraphe}>
+                              {anecdote.valeurAjoutee}
+                            </p>
+                          </div>
                         </div>
 
                         {projetLie && (
@@ -260,11 +260,6 @@ export default async function PageCompetence({ params }: PageProps) {
                 <h2 className={styles.titreSection}>
                   Les réalisations rattachées à cette compétence
                 </h2>
-                <p className={styles.introSection}>
-                  Chacune de ces réalisations est un terrain sur lequel cette
-                  compétence a été mise en œuvre.
-                </p>
-
                 <div className={styles.grilleRealisations}>
                   {realisationsLiees.map((projet) => (
                     <Link
